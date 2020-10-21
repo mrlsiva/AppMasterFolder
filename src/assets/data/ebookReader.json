@@ -1,0 +1,277 @@
+{
+    "type": "table",
+    "name": "categories",
+    "database": "flipbook",
+    "data": [
+        {
+            "id": "1",
+            "series_name": "KIDS CAN RE-CYCLE - PICTURE SERIES",
+            "series_desc": "Children from 2-11 can understand moral habits and other essentials through pictures and info-graphics to understand relationships and boundaries within their environment. The 21st Century Basic Skills readers support the development of reading skills as they introduce students to vocabulary and content they will use for a lifetime. Let your young readers discover the joy of recycling in such a young age as they build reading fluency.",
+            "series_table_name": "kidscanrecycle",
+            "no_of_books": "6",
+            "age_group": "3-5 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpFAD7.tmp"
+        },
+        {
+            "id": "2",
+            "series_name": "WHAT'S YOUR HEALTHY PLATE- PICTURE SERIES",
+            "series_desc": "This new picture series highlights what is your healthy plate for children? Age 3-5! By introducing dairy, Fruits, Vegetables, Essential grains, Protein, Oil & Fats This leveled reader helps the young child understand the importance of their healthy plate as a part of a balanced diet.",
+            "series_table_name": "whatsyourhealthyplate",
+            "no_of_books": "6",
+            "age_group": "3-5 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpF7A9.tmp"
+        },
+        {
+            "id": "3",
+            "series_name": "PICTURE BOOKS",
+            "series_desc": "A Picture Book combines visual and verbal narratives in a book format, most often aimed at young children from 3-5. The images in picture books use a range of media such as oil paints, acrylics, watercolor, and pencil. Picture books tend to have two functions in the lives of children: they are first read to young children by adults, and then children read them themselves once they begin learning to read",
+            "series_table_name": "picturebooks",
+            "no_of_books": "25",
+            "age_group": "3-5 Years",
+            "banner_img": "E:\\xampp\\tmp\\php879.tmp"
+        },
+        {
+            "id": "4",
+            "series_name": "PLANETS SERIES- PICTURE SERIES",
+            "series_desc": "The 21st Century Junior Library: Solar System series introduces young readers to the wonders of the planets in our solar system. Through engaging text and dramatic full-color photographs and spacecraft images, students will be taken on a fascinating tour of our solar system’s eight planets and their moons. Each book contains information about the planet including its relationship to the sun and other planets, key characteristics, history, and other fun, relevant facts.",
+            "series_table_name": "planetsseries",
+            "no_of_books": "8",
+            "age_group": "4-10 Years",
+            "banner_img": "E:\\xampp\\tmp\\php894.tmp"
+        },
+        {
+            "id": "5",
+            "series_name": "GROWING PLANTS- PICTURE SERIES",
+            "series_desc": "Beautiful photographs combined with easy-to-read text make this series a good choice for young aspiring botanists. This engaging series provides the right amount of information on how plants grow, why they need sun, and how plants are used in food, clothing, and medicine.",
+            "series_table_name": "growingplants",
+            "no_of_books": "8",
+            "age_group": "3-6 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpE64E.tmp"
+        },
+        {
+            "id": "6",
+            "series_name": "HOW DID THAT GET TO MY TABLE-PICTURE SERIES",
+            "series_desc": "In this series, readers are exposed to the key concepts of production, distribution, and consumption. Each book examines a product or service that kids see or use every day and follows it from raw material to finished goods. The series helps students understand the inter-connectedness of the environment in which they live.",
+            "series_table_name": "howdidthatgettomytable",
+            "no_of_books": "8",
+            "age_group": "3-8 Years",
+            "banner_img": "E:\\xampp\\tmp\\php9DB4.tmp"
+        },
+        {
+            "id": "7",
+            "series_name": "HOW DID THAT GET TO MY HOUSE - PICTURE SERIES",
+            "series_desc": "Kids have so many questions. Where is the Internet? How does electricity work? Where does gas come from? How does water get into the house? This series provides readers with a scientific foundation to pique interest in the physical world in which we live.",
+            "series_table_name": "howdidthatgettomyhouse",
+            "no_of_books": "8",
+            "age_group": "4-8 Years",
+            "banner_img": "E:\\xampp\\tmp\\php4F42.tmp"
+        },
+        {
+            "id": "8",
+            "series_name": "CHARACTER EDUCATION -PICTURE SERIES",
+            "series_desc": "This eight-book series teaches children about human values including respect, fairness, responsibility, and sportsmanship. The Character Education series is intended to help build a foundation for students to develop into morally responsible, self-disciplined citizens.",
+            "series_table_name": "charactereducation",
+            "no_of_books": "8",
+            "age_group": "3-6 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpDD9E.tmp"
+        },
+        {
+            "id": "9",
+            "series_name": "HOW DOES THAT FLY? -PICTURE SERIES",
+            "series_desc": "Kids are very interested in aviation and how things fly. In this series, bright, engaging photos and clear, inviting text will captivate young readers as they explore these wonderful flying machines. \r\nThe series contains a mix of aircraft from gliders, hot air balloons and blimps, to supersonic fighter planes and bombers, to helicopters and propeller planes. While the stunning photos draw students into the book, the text exposes them to the science of flight. This set will be a winner for both avid and hard-to-reach readers.",
+            "series_table_name": "howdoesthatfly",
+            "no_of_books": "8",
+            "age_group": "3-5 Years",
+            "banner_img": "E:\\xampp\\tmp\\php4921.tmp"
+        },
+        {
+            "id": "10",
+            "series_name": "FARM ANIMAL SERIES- PICTURE SERIES",
+            "series_desc": "Farm animals are fascinating to kids of all ages. The series introduces young readers to animals that can be found on farms, such as pigs, sheep, horses, and cows, and describes the ways in which the animals help people.",
+            "series_table_name": "farmanimalseries",
+            "no_of_books": "10",
+            "age_group": "3-6 Years",
+            "banner_img": "E:\\xampp\\tmp\\php2903.tmp"
+        },
+        {
+            "id": "11",
+            "series_name": "WHAT DOES THIS DO? - PICTURE SERIES",
+            "series_desc": "Kids are fascinated with what machines do. From building skyscrapers to putting out fires, from tearing down old houses to hauling loads of gravel and rocks, heavy equipment is everywhere. Engaging text and appealing photos will encourage kids to read and learn about how these machines work.",
+            "series_table_name": "whatdoesthisdo",
+            "no_of_books": "10",
+            "age_group": "3-5 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpFB38.tmp"
+        },
+        {
+            "id": "12",
+            "series_name": "WHAT SHOUD I DO? - PICTURE SERIES",
+            "series_desc": "What should you do at the pool to stay safe? How should you cross a busy street? What should you do if you are approached by a stranger? How should you play safely on the playground? Books in the Community Connections: What Should I Do? series introduce children to key safety topics. Clear, age- appropriate text combined with relevant photographs make this a must-have series for all school and public libraries.",
+            "series_table_name": "whatshoudido",
+            "no_of_books": "8",
+            "age_group": "3-5 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpEE92.tmp"
+        },
+        {
+            "id": "13",
+            "series_name": "HOW TO WRITE SERIES",
+            "series_desc": "Writing is an important skill that kids use almost every day. Whether they’re working on a school report or writing about their day, the Language Arts Explorer Junior: Writing Series has tips and tricks that will help them become writing experts.",
+            "series_table_name": "howtowriteseries",
+            "no_of_books": "14",
+            "age_group": "5-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpC193.tmp"
+        },
+        {
+            "id": "14",
+            "series_name": "LEARNING ONLINE ETIQUETTE",
+            "series_desc": "The Learning online Information Explorer series provides readers with the tools they need to FIND, ORGANIZE, and SHARE information clearly and effectively. Activities designed to help readers explore all kinds of information sources on the Internet are included in each chapter. Readers are encouraged to think critically as they conduct research, collaborate with fellow students, and present their findings in new and interesting ways.",
+            "series_table_name": "learningonlineetiquette",
+            "no_of_books": "25",
+            "age_group": "6-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpB809.tmp"
+        },
+        {
+            "id": "15",
+            "series_name": "MATHS-DO IT WITH NUMBERS",
+            "series_desc": "This offering is an addition to our popular Real World Math series which reviewers have been calling “extraordinary, outstanding, and innovative.” The series takes a cross- curricular approach by combining math and geography & Sports. The main text covers important concepts in Sports and Geography while innovative math challenge questions encourage students to use their math skills to reinforce the information presented in the text. The solutions to each of the math challenges are clearly explained in the back of the book.",
+            "series_table_name": "maths",
+            "no_of_books": "24",
+            "age_group": "7-12  Years",
+            "banner_img": "E:\\xampp\\tmp\\phpFDAA.tmp"
+        },
+        {
+            "id": "16",
+            "series_name": "JUNIOR SCIENTISTS - SERIES",
+            "series_desc": "Science exploration should not be limited to conducting experiments in a laboratory. Science is fun and can be done anywhere! In this new series, young scientists are taught that experiments using the scientific method can be conducted in everyday places like the gym, car, kitchen, or at the beach. Each book contains entertaining, easy-to-follow hands- on experiments that introduce readers to science and\r\nthe scientific method. Bright, cool drawings paired with clear “how to” photos will make these book’s a hit with the budding scientists in your classroom. \r\nDo your students learn by experimenting? Do they want to find out more about how scientists work? Then the Science Explorer Junior books are right for your library! Through thinking and observation skills, your students will enjoy activities that will help them learn about everything from rocks and soil to magnets and solar energy. The Science Explorer Junior series is must for all the junior scientists in your school.\r\n",
+            "series_table_name": "juniorscientists",
+            "no_of_books": "21",
+            "age_group": "7-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpA1A.tmp"
+        },
+        {
+            "id": "17",
+            "series_name": "HOW DID THEY BUILD THAT?? - PICTURE SERIES",
+            "series_desc": "From an early age, kids love to build things. This engaging series will capture the attention of young readers as they learn about how things are built. The series focuses on items that students encounter every day, from roads and bridges to skyscrapers and stadiums. This series is sure to educate and entertain kids as they learn about the world around them.",
+            "series_table_name": "howdidtheybuildthat",
+            "no_of_books": "12",
+            "age_group": "5-12 Years",
+            "banner_img": "E:\\xampp\\tmp\\php2EB5.tmp"
+        },
+        {
+            "id": "18",
+            "series_name": "HOW DO WE LIVE TOGETHER - PICTURE SERIES",
+            "series_desc": "This series in the Community Connections library opens young eyes to the bustling world around them and gently encourages early learning. Boys and girls will see how animal mothers care for their young, where the various creatures live, what they eat and how they behave. Readers are encouraged to think critically about how we share our back yards with these fascinating animals.",
+            "series_table_name": "howdowelivetogether",
+            "no_of_books": "8",
+            "age_group": "5-12 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpE73E.tmp"
+        },
+        {
+            "id": "19",
+            "series_name": "COOL CAREERS",
+            "series_desc": "The Careers series introduces young readers to many career choices. There are a total of 72 different careers for children to read upon. Each book in the series provides students with an overview of what it is like to work within an organization like a hospital or farm, and then profiles several careers within the institution. \r\n\r\nThe Innovation in Entertainment series explores the role that innovation has played in changing the way that people are entertained. This series takes a look at the people and the creative ideas that have changed Careers. These books have exposed students to emerging careers in science, vocational and technical education, and new “green” jobs. \r\n\r\nCool Arts Careers\r\n\r\nWe are pleased to announce the addition of Cool Arts Careers following the same successful format. This series focuses on careers in film, TV, dance, fashion, and music. Students will gain a new perspective on these jobs, and gain a better understanding of the path needed to follow their dreams of a career in the arts. \r\nCareer & Technical Education\r\nThe focus of the series is on careers that are projected to grow over the next several years and that are attainable without a four-year college degree. Each title explorers what it takes to enter the field, compensation ranges, and a “day in the life” look at the career. ",
+            "series_table_name": "coolcareers",
+            "no_of_books": "74",
+            "age_group": "8-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\php3AC9.tmp"
+        },
+        {
+            "id": "20",
+            "series_name": "SCIENCE EXPLORER",
+            "series_desc": "The Science Explorer library provides readers with the opportunity for a hands-on experience with the world around us. These books use the scientific method to explore everything from the rocks and soil beneath our feet to the simple machines that make our lives easier. Readers are encouraged to think like scientists as they ask questions, gather information, and conduct experiments. \r\nScience Lab delves into the science of earth and space, life, and technology, while engaging readers in the process of scientific inquiry. Each book in the series uses the voice of a scientist or lab technician to take the reader through several fictional, but fact-based experiments. Through the journal notes of the narrator’s own problem, prediction, experiment, and results, the readers will see the scientific process in action.",
+            "series_table_name": "scienceexplorer",
+            "no_of_books": "32",
+            "age_group": "7-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpB768.tmp"
+        },
+        {
+            "id": "21",
+            "series_name": "HEALTHY FOR LIFE",
+            "series_desc": "The Healthy for Life series introduces readers to exciting sports that can be part of a healthy and active lifestyle. These engaging titles promote good physical health for students while examining issues like why exercise is important and how leadership is used in sports.",
+            "series_table_name": "healthyforlife",
+            "no_of_books": "14",
+            "age_group": "8-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\php770F.tmp"
+        },
+        {
+            "id": "22",
+            "series_name": "GLOBAL PERSPECTIVES",
+            "series_desc": "The Global Perspectives series introduces readers to social and scientific topics that impact people and communities around the world. Students are encouraged to think, seek out additional information, and get involved. Written in engaging narrative format, the text provides a truly global perspective on many issues.",
+            "series_table_name": "globalperspectives",
+            "no_of_books": "7",
+            "age_group": "8-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\php5933.tmp"
+        },
+        {
+            "id": "23",
+            "series_name": "21ST CENTURY LIBRARY SERIES",
+            "series_desc": "The Innovation in Entertainment series explores the role that innovation has played in changing the way that people are entertained. This series takes a look at the people and the creative ideas that have changed this industry. \r\nThe Innovation in Medicine series explores the role innovation has played in medicine and how people’s lives and health have improved as a result. Life expectancy has increased by some 28 years in the last century. \r\nThe Innovation in Transportation series takes a look at people and creative ideas that have changed the way that we travel and transport products. The series answers questions like:",
+            "series_table_name": "21stcenturylibraryseries",
+            "no_of_books": "34",
+            "age_group": "8-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\php1928.tmp"
+        },
+        {
+            "id": "24",
+            "series_name": "REAL WORLD SCIENCE",
+            "series_desc": "This 10-book series provides students with background on key concepts in science. Each title includes hands-on exercises aimed at engaging students in the process and developing skills that are essential to scientific discoveries and learning.",
+            "series_table_name": "realworldscience",
+            "no_of_books": "10",
+            "age_group": "8-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpB663.tmp"
+        },
+        {
+            "id": "25",
+            "series_name": "NATURAL DISASTERS",
+            "series_desc": "Natural Disasters series shows readers how they can use their math skills to learn more about the 21st Century world that we live in. Each title in the series provides students with information on specific natural disasters and highlights the role math plays in studying these important environmental phenomena. Grade appropriate math challenge questions encourage students to use their math skills to reinforce the information presented in the text. The solution to the challenges is clearly explained in the back of the book.",
+            "series_table_name": "naturaldisasters",
+            "no_of_books": "8",
+            "age_group": "8-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpB45C.tmp"
+        },
+        {
+            "id": "26",
+            "series_name": "POWER UP - SERIES",
+            "series_desc": "Students in today’s world are barraged with news about our future energy needs. What does going green, energy independence, or alternative energy really mean? This important series from Little Prodigy Books helps students understand the pros and cons of existing and emerging energy sources, giving students a better understanding of the debate over our energy strategies.",
+            "series_table_name": "powerup",
+            "no_of_books": "10",
+            "age_group": "8-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\php5948.tmp"
+        },
+        {
+            "id": "27",
+            "series_name": "SAVE THE PLANET - SERIES",
+            "series_desc": "At last—an effective language arts series that bridges the curriculum gaps! \r\nEach book sends the reader on a fact-finding mission, posing an initial challenge and concluding with questions and answers. Through engaging, interactive scenarios, learners can experiment with text prediction, purpose-driven research, and creative problem solving—all critical thinking skills—while learning about ways to care for our planet.",
+            "series_table_name": "savetheplanet",
+            "no_of_books": "9",
+            "age_group": "8-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\phpFA1D.tmp"
+        },
+        {
+            "id": "28",
+            "series_name": "GLOBAL PRODUCTS",
+            "series_desc": "The Global Products series introduces readers to important concepts needed to understand their place in the global economy of the 21st Century. The books in the series both inform and challenge, encouraging the young reader to consider everything from where the components of a product are made, to the long-term impact of globalization on the world in which they will grow up.",
+            "series_table_name": "globalproducts",
+            "no_of_books": "18",
+            "age_group": "8-14 Years",
+            "banner_img": "E:\\xampp\\tmp\\php58F2.tmp"
+        },
+        {
+            "id": "29",
+            "series_name": "ANIMAL INVADERS",
+            "series_desc": "Animal Invaders offers animal titles that do much more than simply profile kid-popular wildlife. This series explores animals that were on the endangered species list, but are on the way back to recovery. While developing critical thinking skills, students discover why the species became endangered and what was done to help them survive — as well as the ramifications of success.",
+            "series_table_name": "animalinvaders",
+            "no_of_books": "26",
+            "age_group": "7-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\php272.tmp"
+        },
+        {
+            "id": "30",
+            "series_name": "ITS COOL TO LEARN ABOUT COUNTRIES",
+            "series_desc": "Have your children ever wanted to explore a different country and learn more about its culture? With this informative series they’ll get the inside scoop on nations around the world, including everything from their governments to the holidays they celebrate. Learn about languages, holidays, and foods with fun activities and recipes. Use maps and graphs to study the countries’ geography and economy. Students will become Social Studies Explorers and tour the 16 most populated countries in the world!",
+            "series_table_name": "itscooltolearnaboutcountries",
+            "no_of_books": "16",
+            "age_group": "7-15 Years",
+            "banner_img": "E:\\xampp\\tmp\\php83E7.tmp"
+        }
+    ]
+}

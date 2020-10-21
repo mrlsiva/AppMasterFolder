@@ -8,29 +8,12 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button>
-        <ion-icon name="home"></ion-icon>
-        <ion-label>Home</ion-label>
-        <!-- <ion-badge>6</ion-badge> -->
-      </ion-tab-button>
-  
-      <ion-tab-button>
-        <ion-icon name="person-circle"></ion-icon>
-        <ion-label>Profile</ion-label>
-      </ion-tab-button>
-  
-      <ion-tab-button>
-        <ion-icon name="book"></ion-icon>
-        <ion-label>E-Book</ion-label>
-      </ion-tab-button>
-  
-      <ion-tab-button>
-        <ion-icon name="chatbubbles"></ion-icon>
-        <ion-label>Chat</ion-label>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
-
+  <!-- <div padding-top padding-bottom>
+    <ion-slides loop="true" pager="false" [options]="slideOpts">
+      <ion-slide *ngFor="let image of bannerImages">
+        <img src="{{image.path}}">
+      </ion-slide>
+      
+    </ion-slides>
+  </div> -->
 </ion-content>
