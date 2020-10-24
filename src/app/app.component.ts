@@ -18,18 +18,23 @@ export class AppComponent implements OnInit {
       icon: 'mail'
     },
     {
+      title: 'About Us',
+      url: '/about',
+      icon: 'archive'
+    },
+    {
       title: 'Out Library Catalogue',
       url: '/tab',
       icon: 'paper-plane'
     },
     {
       title: 'Our Distributorship',
-      url: '/home',
+      url: '/distributorship',
       icon: 'heart'
     },
     {
       title: 'Our Publishing Partners',
-      url: '/home',
+      url: '/distributorship',
       icon: 'archive'
     },
     {

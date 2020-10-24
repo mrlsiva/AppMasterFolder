@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
-import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
+import { Router, NavigationExtras } from '@angular/router';
 
+import { GlobalService } from '../../Service/global.service';
 
 @Component({
   selector: 'app-home',
@@ -12,26 +12,45 @@ import { Observable } from 'rxjs';
 })
 
 export class HomePage implements OnInit {
-  // public folder: string;
-  // public ebookReaderDatas: any;
-  // public slideOpts = {
-  //   initialSlide: 0,
-  //   speed: 400,
-  //   autoplay:true,
-  //   loop: true
-  // };
-  // public bannerImages = [{"path" : "assets/images/ebookBanner/banner-1.jpg"},{"path" : "assets/images/ebookBanner/banner-2.jpg"},{"path" : "assets/images/ebookBanner/banner-3.jpg"},{"path" : "assets/images/ebookBanner/banner-4.jpg"}];
-  constructor(private activatedRoute: ActivatedRoute,
-              public http: HttpClient) { }
-
+  
+   public bannerImages = [{"path" : "assets/images/ebookBanner/banner-1.jpg"},{"path" : "assets/images/ebookBanner/banner-2.jpg"},{"path" : "assets/images/ebookBanner/banner-3.jpg"},{"path" : "assets/images/ebookBanner/banner-4.jpg"}];
+   public ResponseData:any;
+   public categoriesData: any;
+ 
+ 
+   constructor(private router: Router,
+              public http: HttpClient,
+              public global: GlobalService) { }
+  
   ngOnInit() {
-    // this.getEbookReaderData().subscribe((res: any) => {
-    //   this.ebookReaderDatas = res.data;
-    //   console.log(this.ebookReaderDatas);
-    // });
+    //this.getCategoriesData();
+    this.getCategoriesData().subscribe((res: any) => {
+      this.categoriesData = res.catData;
+      console.log(this.categoriesData);
+    });
+    console.log(this.global.date);
+  }
+  // getCategoriesData(){
+
+  //   console.log('step 1');
+  //   this.global.getHomeCategories().toPromise().then(response =>
+  //    { this.ResponseData=response});
+  //    console.log("dtta",this.ResponseData);
+     
+
+  // }
+
+  getCategoriesData() {
+    return this.http.get('assets/data/categories.json');
   }
 
-  // getEbookReaderData() {
-  //   return this.http.get('assets/data/ebookReader.json');
-  // }
+  navigate(val){
+    console.log(val);
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        special: val
+      }
+    };
+    this.router.navigate(['/individualcategory', val]);
+  }
 }

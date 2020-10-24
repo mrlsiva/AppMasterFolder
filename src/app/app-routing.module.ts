@@ -30,7 +30,22 @@ const routes: Routes = [
   {
     path: 'ebookreader',
     loadChildren: () => import('./pages/ebookreader/ebookreader.module').then( m => m.EbookreaderPageModule)
+  },
+  {
+    path: 'individualcategory',
+    loadChildren: () => import('./Pages/MainCategory/individualcategory/individualcategory.module').then( m => m.IndividualcategoryPageModule)
+  },
+  {
+    path: 'distributorship',
+    loadChildren: () => import('./Pages/Others/distributorship/distributorship.module').then( m => m.DistributorshipPageModule)
+  },  {
+    path: 'about',
+    loadChildren: () => import('./Pages/Others/about/about.module').then( m => m.AboutPageModule)
   }
+
+  
+
+
 ];
 
 @NgModule({

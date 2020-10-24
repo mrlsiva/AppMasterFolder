@@ -46,14 +46,14 @@ const routes: Routes = [
       },
       // {
       //   path: '',
-      //   redirectTo: 'ebookreader',
+      //   redirectTo: '/tab/home',
       //   pathMatch: 'full'
       // }
     ]
   },
   // {
   //   path: '',
-  //   redirectTo: 'ebookreader',
+  //   redirectTo: '/tab/home',
   //   pathMatch: 'full'
   // }
 ];
