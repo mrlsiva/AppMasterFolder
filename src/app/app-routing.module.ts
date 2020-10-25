@@ -4,33 +4,24 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/tab/home',
-    pathMatch: 'full'
+    loadChildren: () => import('./pages/tab/tab.module').then( m => m.TabPageModule)
   },
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+    path: 'login',
+    loadChildren: () => import('./pages/account/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'tab',
-    loadChildren: () => import('./pages/tab/tab.module').then( m => m.TabPageModule)
+    path: 'register',
+    loadChildren: () => import('./pages/account/register/register.module').then( m => m.RegisterPageModule)
   },
   {
-    path: 'profile',
-    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+    path: 'membershipaccount',
+    loadChildren: () => import('./Pages/Membership/membershipaccount/membershipaccount.module').then( m => m.MembershipaccountPageModule)
   },
-  {
-    path: 'chat',
-    loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
-  },
-  {
-    path: 'ebookreader',
-    loadChildren: () => import('./pages/ebookreader/ebookreader.module').then( m => m.EbookreaderPageModule)
-  }
 ];
 
 @NgModule({

@@ -8,6 +8,8 @@ import { EbookreaderPageRoutingModule } from './ebookreader-routing.module';
 
 import { EbookreaderPage } from './ebookreader.page';
 
+import { MembershipComponent } from '../../appComponents/membership/membership.component'
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import { EbookreaderPage } from './ebookreader.page';
     IonicModule,
     EbookreaderPageRoutingModule
   ],
-  declarations: [EbookreaderPage]
+  declarations: [EbookreaderPage, MembershipComponent]
 })
 export class EbookreaderPageModule {}

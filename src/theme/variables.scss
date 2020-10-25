@@ -75,6 +75,8 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 
+   --ion-font-family: 'My Custom Font';
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -146,6 +148,13 @@
     --ion-color-light-contrast-rgb: 255,255,255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+    @font-face {
+      font-family: 'My Custom Font';
+      font-style: normal;
+      font-weight: normal;
+      src: url('../assets/font/Slabo27px-Regular.ttf');
+    }
+    --ion-color-buttonClr : #e43750;
   }
 
   /*

@@ -1,4 +1,3 @@
-
 <ion-header [translucent]="true" contentId="main">
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -10,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="ebookContent" [fullscreen]="true">
   <div padding-top padding-bottom>
     <ion-slides loop="true" pager="false" [options]="slideOpts">
       <ion-slide *ngFor="let image of bannerImages">
@@ -19,17 +18,37 @@
     </ion-slides>
   </div>
   <div>
-    <img src="assets/images/ebookBanner/table_top_day.jpg">
+    <img src="assets/images/ebookBanner/{{eBookBannerTop}}.jpg">
   </div>
   <div>
-    <ion-grid class="ion-padding ion-text-center ebookrows">
+    <ion-grid class="ion-text-center ebookrows">
       <ion-row *ngFor="let ebook of ebookReaderDatas">
-        <ion-col size="2"><p>{{ebook.id}}</p></ion-col>
-        <ion-col size="6"><p>{{ebook.series_name}}</p></ion-col>
-        <ion-col size="2"><p>{{ebook.no_of_books}}</p></ion-col>
-        <ion-col size="2"><p>{{ebook.age_group}}</p></ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-col><p>{{ebook.series_name}}</p></ion-col>
+          </ion-row>
+          <ion-row class="bottomRow">
+            <ion-col><p>No.Of Books: {{ebook.no_of_books}}</p></ion-col>
+            <ion-col><p>Age Group: {{ebook.age_group}}</p></ion-col>
+          </ion-row>
+        </ion-col>
       </ion-row>
     </ion-grid>
+  </div>
+  <div>
+    <img src="assets/images/ebookBanner/{{eBookBannerBottom}}.jpg">
+  </div>
+  <div>
+    <app-membership></app-membership>
+  </div>
+  <div>
+    <img src="assets/images/ebookBanner/Layout-01.jpg">
+  </div>
+  <div class="ion-text-center">
+    <ion-button class="buttonClass">View Our E-Book Catalouge</ion-button>
+  </div>
+  <div>
+    <img src="assets/images/ebookBanner/Layout-02.jpg">
   </div>
 </ion-content>
 

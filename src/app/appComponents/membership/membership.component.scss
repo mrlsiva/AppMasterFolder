@@ -1,0 +1,30 @@
+h3 {
+  text-decoration: underline;
+  text-decoration-color: #e43750;
+  text-underline-position: under;
+}
+.membershipImg {
+  padding: 20px;
+  width: 30%;
+  background-color: #e43750;
+  //border: 5px solid green;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+ion-slides {
+  --bullet-background: red;
+  --bullet-background-active: #e43750;
+}
+.listPlan{
+  border: 0.5px solid rgb(233, 232, 232);
+  .basicRow {
+    color: white;
+    background-color: #e43750;
+  }
+  .basicAmt {
+    background-color: #eee;
+  }
+  .planSupport {
+    border-bottom: 1px solid #f6f1f1;
+  }
+}

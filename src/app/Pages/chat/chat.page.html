@@ -1,9 +1,14 @@
-<ion-header>
+<ion-header [translucent]="true" contentId="main">
   <ion-toolbar>
-    <ion-title>chat</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <div>
+      <img src="assets/images/ebookBanner/logo.png" class="appLogo">
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <app-membership></app-membership>
 </ion-content>

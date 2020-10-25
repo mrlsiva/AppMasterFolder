@@ -1,0 +1,25 @@
+.loginCnt {
+    .appLogoLogin {
+        width: 70%;
+    }
+    .loginLock {
+        background: rgb(244, 245, 243);
+        margin: 0 auto;
+        width: 15%;
+        height: 10%;
+        border: 1px solid white;
+        border-radius: 50%;
+
+    }
+    .login_form {
+        //background: rgb(244, 245, 243);
+        border: 1px solid #e43750;
+        border-radius: 20px;
+        //position: relative;
+        margin-top: 20%;
+        box-shadow: 5px 5px 5px #e43750;
+        ion-input {
+            --highlight-color-focused:  #e43750 !important;
+        }
+    }
+}

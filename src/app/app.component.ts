@@ -10,16 +10,16 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public selectedIndex = 0;
+  public selectedIndex = 1;
   public appPages = [
     {
       title: 'Profile',
-      url: '/home',
+      url: '/login',
       icon: 'mail'
     },
     {
       title: 'Out Library Catalogue',
-      url: '/tab',
+      url: '/membershipaccount',
       icon: 'paper-plane'
     },
     {
@@ -29,17 +29,17 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Our Publishing Partners',
-      url: '/home',
+      url: '/register',
       icon: 'archive'
     },
     {
       title: 'My Memberships',
-      url: '/home',
+      url: '/membershipaccount',
       icon: 'trash'
     },
     {
       title: 'Catalogue',
-      url: '/',
+      url: '/home',
       icon: 'warning'
     }
   ];
@@ -61,6 +61,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+
     const path = window.location.pathname.split('folder/')[1];
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ActivatedRoute } from '@angular/router';
-
 @Component({
   selector: 'app-tab',
   templateUrl: './tab.page.html',
@@ -9,12 +7,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TabPage implements OnInit {
 
-  public folder: string;
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit() {
-    // alert(this.activatedRoute.snapshot.paramMap.get('id'));
-    // this.folder = this.activatedRoute.snapshot.paramMap.get('id');
   }
 
 }

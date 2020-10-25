@@ -2,60 +2,39 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { TabPage } from './tab.page';
-
 const routes: Routes = [
   {
-    path: '',
+    path: 'tab',
     component: TabPage,
     children: [
       {
         path: 'home',
-        children:[
-          {
-            path:'',
-            loadChildren: '../home/home.module#HomePageModule'
-          }
-        ]
+        loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
         path: 'ebookreader',
-        children:[
-          {
-            path:'',
-            loadChildren: '../ebookreader/ebookreader.module#EbookreaderPageModule'
-          }
-        ]
+        loadChildren: () => import('../ebookreader/ebookreader.module').then(m => m.EbookreaderPageModule)
       },
       {
         path: 'profile',
-        children:[
-          {
-            path:'',
-            loadChildren: '../profile/profile.module#ProfilePageModule'
-          }
-        ]
+        loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
       },
       {
         path: 'chat',
-        children:[
-          {
-            path:'',
-            loadChildren: '../chat/chat.module#ChatPageModule'
-          }
-        ]
+        loadChildren: () => import('../chat/chat.module').then(m => m.ChatPageModule)
       },
-      // {
-      //   path: '',
-      //   redirectTo: 'ebookreader',
-      //   pathMatch: 'full'
-      // }
+      {
+        path: '',
+        redirectTo: '/tab/home',
+        pathMatch: 'full'
+      }
     ]
   },
-  // {
-  //   path: '',
-  //   redirectTo: 'ebookreader',
-  //   pathMatch: 'full'
-  // }
+  {
+    path: '',
+    redirectTo:'/tab/home',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
