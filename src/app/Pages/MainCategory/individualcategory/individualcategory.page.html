@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>individualcategory</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img class="img" src="{{data.get('thumb_img')}}">
+    <ion-card-content>
+      <div class='detail-title'>
+        {{data.get('series_name')}}
+      </div>
+      <div class='detail-price'>
+        PRICE : {{data.get('actual_price')}}
+      </div>
+        <ul class="ul-style">
+          <li>Age : 3 and up</li>
+          <li> Series: Language Arts Explorer: Habits and Essentials</li>
+          <li> No pf Pages: 24 pages</li>
+          <li> Publisher: Aries Books International. (January 1 2019)</li>
+          <li> Author: Cecilia Minden</li>
+          <li>  Language: English</li>
+          <li> Copyright: 2019</li>
+          <li> Graphics: Full Color Photographs</li>
+
+        </ul>
+        <button class="e-book-button">Login & Add to cart</button>
+
+        <div class="desc-view">Description</div>
+        <div>Level 3 guided reader that helps teach students the importance of keeping water clean and gives practical ideas on things they can do to pitch in.</div>
+    </ion-card-content>
+    
+  </ion-card>
+  <!-- <ion-fab left bottom>
+    <button ion-fab class="fab"><ion-icon name="arrow-dropleft"></ion-icon></button>
+  </ion-fab> -->
+</ion-content>

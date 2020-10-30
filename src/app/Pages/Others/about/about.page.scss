@@ -1,0 +1,32 @@
+.col-12{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .title{
+    border-bottom: 2px solid #e43750;
+    display: inline-block;
+  }
+
+
+  .col-6{
+    margin-top: .5rem!important;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .grid-row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-p{
+    line-height: 25px;
+  }

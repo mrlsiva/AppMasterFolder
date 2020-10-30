@@ -1,0 +1,40 @@
+.slide-card{
+    border:1px solid #ccc;
+    max-width: 200px;
+    float: left;
+    margin: 10px;
+}
+.thumb-image{
+    width: 100%;
+    height: 100%;
+}
+.e-book-button{
+  color: white;
+  padding: 10px 25px;
+  width: -webkit-fill-available;
+  text-align: center;
+  text-decoration: none;
+  background-color: #e43750 !important;
+  margin: 5px;
+  border-radius: 5px !important;
+}
+.show_two_line {
+    // height: 2.60rem;
+    padding: 0.10rem 0.05rem;
+    overflow: hidden;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: lowercase;
+}
+.slider-title{
+    text-transform: uppercase;
+    border-bottom: 3px solid #e43750;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 15px;
+}
+
