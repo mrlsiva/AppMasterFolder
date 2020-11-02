@@ -3,18 +3,23 @@
     // ion-button {
     //     background-color: #e43750;
     // }
+    h3 {
+        text-decoration: underline;
+        text-decoration-color: #e43750;
+        text-underline-position: under;
+      }
     .ebookrows {
         ion-row {
             background-color: #e5f7ff !important;
             margin: 5px;
             p {
-                font-size: 1rem;
+                font-size: 0.8rem;
             }
         }
         .bottomRow {
-            margin-top: -30px;
+            margin-top: -25px;
             p {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
         }
     }

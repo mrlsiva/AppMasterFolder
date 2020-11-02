@@ -1,7 +1,17 @@
+<ion-header [translucent]="true" contentId="main">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div>
+      <img src="assets/images/ebookBanner/logo.png" class="appLogo">
+    </div>
+  </ion-toolbar>
+</ion-header>
 <ion-content class="loginCnt ion-padding">
-  <div class="ion-text-center ion-margin-top">
+  <!-- <div class="ion-text-center ion-margin-top">
     <img src="assets/images/ebookBanner/logo.png" class="appLogoLogin">
-  </div>
+  </div> -->
   <div class="login_form ion-padding">
     <form>
       <ion-item>
@@ -22,7 +32,7 @@
       <div class="ion-text-center">
         <ion-button class="buttonClass">Login</ion-button>
       </div>
-      <ion-item lines="none">
+      <ion-item lines="none"  [routerLink]="['/register']">
         <ion-label>Not Registered? <a>Create a new account </a></ion-label>
       </ion-item>
     </form>

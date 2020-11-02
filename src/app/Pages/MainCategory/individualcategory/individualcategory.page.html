@@ -1,12 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>individualcategory</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <p>Kids Can Recycle</p></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
-    <img class="img" src="{{data.get('thumb_img')}}">
+    <img class="img" src="../../../../assets/images/general/thumb_146.jpg">
     <ion-card-content>
       <div class='detail-title'>
         {{data.get('series_name')}}
@@ -25,10 +29,15 @@
           <li> Graphics: Full Color Photographs</li>
 
         </ul>
-        <button class="e-book-button">Login & Add to cart</button>
-
-        <div class="desc-view">Description</div>
-        <div>Level 3 guided reader that helps teach students the importance of keeping water clean and gives practical ideas on things they can do to pitch in.</div>
+        <!-- <button>Login & Add to cart</button> -->
+        <div class="ion-text-center">
+          <ion-button class="buttonClass">Login & Add to cart</ion-button>
+        </div>
+        
+        <div class="detail-price description">
+          Description
+        </div>
+        <div class="ion-text-justify">Level 3 guided reader that helps teach students the importance of keeping water clean and gives practical ideas on things they can do to pitch in.</div>
     </ion-card-content>
     
   </ion-card>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Kids Can Recycle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="viewMoreBooks">
+    <ion-grid class="ion-text-center">
+      <ion-row>
+        <ion-col  *ngFor="let books of global.viewMoreBooks" size="6"  [routerLink]="['/individualcategory']">
+          <img src="../../../../assets/images/general/thumb_146.jpg" />
+          <p class="ion-no-padding ion-no-margin">{{books.name}}</p>
+          <div *ngIf="displayInd">
+            <p class="ion-text-left">Age Group : {{books.age}}</p>
+            <p class="ion-text-left">Price : {{books.Price}}</p>
+            <ion-button class="buttonClass" [routerLink]="['/individualcategory']">View Product</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

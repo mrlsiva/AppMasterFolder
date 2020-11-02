@@ -44,7 +44,7 @@ export class HomePage implements OnInit {
     return this.http.get('assets/data/categories.json');
   }
 
-  navigate(val){
+  navigate(val: any){
     console.log(val);
     let navigationExtras: NavigationExtras = {
       queryParams: {
@@ -52,5 +52,10 @@ export class HomePage implements OnInit {
       }
     };
     this.router.navigate(['/individualcategory', val]);
+  }
+
+  openViewMorePage() {
+    this.global.setPageName('homePage');
+    this.router.navigate(['/viewmorebooks']);
   }
 }

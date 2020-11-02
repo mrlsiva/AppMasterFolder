@@ -7,7 +7,8 @@
           <ion-note>pmrlshiva@gmail.com</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+            <!-- <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i"> -->
+              <ion-item (click)="sideMenuPage(p.url)">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
@@ -23,7 +24,7 @@
           </ion-item>
         </ion-list> -->
         <ion-menu-toggle>
-        <ion-item lines="none" routerDirection="root" routerLink="/login">
+        <ion-item lines="none" routerDirection="root" (click)="openLoginPage()">
           <ion-icon slot="start"  name="log-out"></ion-icon>
           <ion-label>Login</ion-label>
         </ion-item>

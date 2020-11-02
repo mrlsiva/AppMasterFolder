@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Router, NavigationExtras } from '@angular/router';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -12,11 +13,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent implements OnInit {
   public selectedIndex = 1;
   public appPages = [
-    {
-      title: 'Profile',
-      url: '/login',
-      icon: 'mail'
-    },
+    // {
+    //   title: 'Profile',
+    //   url: '/profile',
+    //   icon: 'mail'
+    // },
     {
       title: 'About Us',
       url: '/about',
@@ -24,7 +25,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Out Library Catalogue',
-      url: '/membershipaccount',
+      url: '/',
       icon: 'paper-plane'
     },
     {
@@ -34,11 +35,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Our Publishing Partners',
-<<<<<<< HEAD
-      url: '/register',
-=======
       url: '/distributorship',
->>>>>>> 4727efb406ca3bd8d0d26cce9c17f5d42bfb3da1
       icon: 'archive'
     },
     {
@@ -48,7 +45,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Catalogue',
-      url: '/home',
+      url: '/',
       icon: 'warning'
     }
   ];
@@ -57,7 +54,8 @@ export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private router: Router,
   ) {
     this.initializeApp();
   }
@@ -75,5 +73,12 @@ export class AppComponent implements OnInit {
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
+  }
+  sideMenuPage(url: any) {
+    this.router.navigate([url]);
+  }
+
+  openLoginPage() {
+    this.router.navigate(['/login']);
   }
 }

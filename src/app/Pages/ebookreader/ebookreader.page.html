@@ -1,6 +1,6 @@
 <ion-header [translucent]="true" contentId="main">
   <ion-toolbar>
-    <ion-buttons slot="start">
+    <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <div>
@@ -21,8 +21,8 @@
     <img src="assets/images/ebookBanner/{{eBookBannerTop}}.jpg">
   </div>
   <div>
-    <ion-grid class="ion-text-center ebookrows">
-      <ion-row *ngFor="let ebook of ebookReaderDatas">
+    <ion-grid class="ion-text-left ion-no-padding ebookrows">
+      <ion-row *ngFor="let ebook of ebookReaderDatas"  (click)="openViewMorePage()">
         <ion-col>
           <ion-row>
             <ion-col><p>{{ebook.series_name}}</p></ion-col>
@@ -38,7 +38,8 @@
   <div>
     <img src="assets/images/ebookBanner/{{eBookBannerBottom}}.jpg">
   </div>
-  <div>
+  <div class="ion-text-center">
+    <h3>MEMBERSHIP PLAN</h3>
     <app-membership></app-membership>
   </div>
   <div>

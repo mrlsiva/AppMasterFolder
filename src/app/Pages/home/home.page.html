@@ -15,15 +15,13 @@
       <ion-slide *ngFor="let image of bannerImages">
         <img src="{{image.path}}">
       </ion-slide>
-      
     </ion-slides>
-    
   </div>
   <div>
     <ion-grid>
       <ion-row *ngFor="let list of categoriesData; let i = index">
         <ion-col>
-          <div>
+          <div (click)="openViewMorePage()">
             <p class="slider-title">{{list[i].series_name}}</p> 
           </div>
           <ion-slides  [options]="slideOpts">
@@ -33,24 +31,36 @@
                   <ion-img [src]="item.thumb_img"></ion-img>
                 </ion-thumbnail>
                 <h5 class="show_two_line">{{item.series_name}}</h5>
-                <button class="e-book-button">View Details</button>
+                <ion-button>View Details</ion-button>
               </div>
             </ion-slide>
       </ion-slides>
         </ion-col>
       </ion-row>
     </ion-grid>
-    <!-- <ion-slides  [options]="slideOpts">
-      <ion-slide *ngFor="let item of categoriesData">
-        <h1>{{item.series_name}}</h1>
-      </ion-slide>
-    <ion-slide>
-        <h1>Slide 2</h1>
-      </ion-slide>
-      <ion-slide>
-        <h1>Slide 3</h1>
- 
-  </ion-slide> 
-</ion-slides> -->
-</div>  
+</div>
+<!-- 
+<div>
+  <ion-grid>
+    <ion-row *ngFor="let list of categoriesData; let i = index">
+      <ion-col>
+        <div (click)="openViewMorePage()">
+          <p class="slider-title">{{list[i].series_name}}</p> 
+        </div>
+        <div>
+          <ion-slides>
+            <ion-slide class="imageSlide" *ngFor="let item of list"  (click)="navigate(item)">
+              <div>
+                <ion-img [src]="item.thumb_img"></ion-img>
+             
+                <h5 class="show_two_line">{{item.series_name}}</h5>
+                <ion-button class="buttonClass">View Details</ion-button>
+              </div>
+            </ion-slide>
+          </ion-slides>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div> -->
 </ion-content>

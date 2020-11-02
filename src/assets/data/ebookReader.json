@@ -5,7 +5,7 @@
     "data": [
         {
             "id": "1",
-            "series_name": "KIDS CAN RE-CYCLE - PICTURE SERIES",
+            "series_name": "KIDS CAN RE-CYCLE",
             "series_desc": "Children from 2-11 can understand moral habits and other essentials through pictures and info-graphics to understand relationships and boundaries within their environment. The 21st Century Basic Skills readers support the development of reading skills as they introduce students to vocabulary and content they will use for a lifetime. Let your young readers discover the joy of recycling in such a young age as they build reading fluency.",
             "series_table_name": "kidscanrecycle",
             "no_of_books": "6",
@@ -14,7 +14,7 @@
         },
         {
             "id": "2",
-            "series_name": "WHAT'S YOUR HEALTHY PLATE- PICTURE SERIES",
+            "series_name": "WHAT'S YOUR HEALTHY PLATE",
             "series_desc": "This new picture series highlights what is your healthy plate for children? Age 3-5! By introducing dairy, Fruits, Vegetables, Essential grains, Protein, Oil & Fats This leveled reader helps the young child understand the importance of their healthy plate as a part of a balanced diet.",
             "series_table_name": "whatsyourhealthyplate",
             "no_of_books": "6",
@@ -32,7 +32,7 @@
         },
         {
             "id": "4",
-            "series_name": "PLANETS SERIES- PICTURE SERIES",
+            "series_name": "PLANETS SERIES",
             "series_desc": "The 21st Century Junior Library: Solar System series introduces young readers to the wonders of the planets in our solar system. Through engaging text and dramatic full-color photographs and spacecraft images, students will be taken on a fascinating tour of our solar system’s eight planets and their moons. Each book contains information about the planet including its relationship to the sun and other planets, key characteristics, history, and other fun, relevant facts.",
             "series_table_name": "planetsseries",
             "no_of_books": "8",
@@ -41,7 +41,7 @@
         },
         {
             "id": "5",
-            "series_name": "GROWING PLANTS- PICTURE SERIES",
+            "series_name": "GROWING PLANTS",
             "series_desc": "Beautiful photographs combined with easy-to-read text make this series a good choice for young aspiring botanists. This engaging series provides the right amount of information on how plants grow, why they need sun, and how plants are used in food, clothing, and medicine.",
             "series_table_name": "growingplants",
             "no_of_books": "8",
@@ -50,7 +50,7 @@
         },
         {
             "id": "6",
-            "series_name": "HOW DID THAT GET TO MY TABLE-PICTURE SERIES",
+            "series_name": "HOW DID THAT GET TO MY TABLE",
             "series_desc": "In this series, readers are exposed to the key concepts of production, distribution, and consumption. Each book examines a product or service that kids see or use every day and follows it from raw material to finished goods. The series helps students understand the inter-connectedness of the environment in which they live.",
             "series_table_name": "howdidthatgettomytable",
             "no_of_books": "8",
@@ -59,7 +59,7 @@
         },
         {
             "id": "7",
-            "series_name": "HOW DID THAT GET TO MY HOUSE - PICTURE SERIES",
+            "series_name": "HOW DID THAT GET TO MY HOUSE",
             "series_desc": "Kids have so many questions. Where is the Internet? How does electricity work? Where does gas come from? How does water get into the house? This series provides readers with a scientific foundation to pique interest in the physical world in which we live.",
             "series_table_name": "howdidthatgettomyhouse",
             "no_of_books": "8",
@@ -68,7 +68,7 @@
         },
         {
             "id": "8",
-            "series_name": "CHARACTER EDUCATION -PICTURE SERIES",
+            "series_name": "CHARACTER EDUCATION",
             "series_desc": "This eight-book series teaches children about human values including respect, fairness, responsibility, and sportsmanship. The Character Education series is intended to help build a foundation for students to develop into morally responsible, self-disciplined citizens.",
             "series_table_name": "charactereducation",
             "no_of_books": "8",
@@ -77,7 +77,7 @@
         },
         {
             "id": "9",
-            "series_name": "HOW DOES THAT FLY? -PICTURE SERIES",
+            "series_name": "HOW DOES THAT FLY?",
             "series_desc": "Kids are very interested in aviation and how things fly. In this series, bright, engaging photos and clear, inviting text will captivate young readers as they explore these wonderful flying machines. \r\nThe series contains a mix of aircraft from gliders, hot air balloons and blimps, to supersonic fighter planes and bombers, to helicopters and propeller planes. While the stunning photos draw students into the book, the text exposes them to the science of flight. This set will be a winner for both avid and hard-to-reach readers.",
             "series_table_name": "howdoesthatfly",
             "no_of_books": "8",
@@ -86,7 +86,7 @@
         },
         {
             "id": "10",
-            "series_name": "FARM ANIMAL SERIES- PICTURE SERIES",
+            "series_name": "FARM ANIMAL SERIES",
             "series_desc": "Farm animals are fascinating to kids of all ages. The series introduces young readers to animals that can be found on farms, such as pigs, sheep, horses, and cows, and describes the ways in which the animals help people.",
             "series_table_name": "farmanimalseries",
             "no_of_books": "10",
@@ -95,7 +95,7 @@
         },
         {
             "id": "11",
-            "series_name": "WHAT DOES THIS DO? - PICTURE SERIES",
+            "series_name": "WHAT DOES THIS DO?",
             "series_desc": "Kids are fascinated with what machines do. From building skyscrapers to putting out fires, from tearing down old houses to hauling loads of gravel and rocks, heavy equipment is everywhere. Engaging text and appealing photos will encourage kids to read and learn about how these machines work.",
             "series_table_name": "whatdoesthisdo",
             "no_of_books": "10",
@@ -104,7 +104,7 @@
         },
         {
             "id": "12",
-            "series_name": "WHAT SHOUD I DO? - PICTURE SERIES",
+            "series_name": "WHAT SHOUD I DO?",
             "series_desc": "What should you do at the pool to stay safe? How should you cross a busy street? What should you do if you are approached by a stranger? How should you play safely on the playground? Books in the Community Connections: What Should I Do? series introduce children to key safety topics. Clear, age- appropriate text combined with relevant photographs make this a must-have series for all school and public libraries.",
             "series_table_name": "whatshoudido",
             "no_of_books": "8",
@@ -140,7 +140,7 @@
         },
         {
             "id": "16",
-            "series_name": "JUNIOR SCIENTISTS - SERIES",
+            "series_name": "JUNIOR SCIENTISTS",
             "series_desc": "Science exploration should not be limited to conducting experiments in a laboratory. Science is fun and can be done anywhere! In this new series, young scientists are taught that experiments using the scientific method can be conducted in everyday places like the gym, car, kitchen, or at the beach. Each book contains entertaining, easy-to-follow hands- on experiments that introduce readers to science and\r\nthe scientific method. Bright, cool drawings paired with clear “how to” photos will make these book’s a hit with the budding scientists in your classroom. \r\nDo your students learn by experimenting? Do they want to find out more about how scientists work? Then the Science Explorer Junior books are right for your library! Through thinking and observation skills, your students will enjoy activities that will help them learn about everything from rocks and soil to magnets and solar energy. The Science Explorer Junior series is must for all the junior scientists in your school.\r\n",
             "series_table_name": "juniorscientists",
             "no_of_books": "21",
@@ -149,7 +149,7 @@
         },
         {
             "id": "17",
-            "series_name": "HOW DID THEY BUILD THAT?? - PICTURE SERIES",
+            "series_name": "HOW DID THEY BUILD THAT??",
             "series_desc": "From an early age, kids love to build things. This engaging series will capture the attention of young readers as they learn about how things are built. The series focuses on items that students encounter every day, from roads and bridges to skyscrapers and stadiums. This series is sure to educate and entertain kids as they learn about the world around them.",
             "series_table_name": "howdidtheybuildthat",
             "no_of_books": "12",
@@ -158,7 +158,7 @@
         },
         {
             "id": "18",
-            "series_name": "HOW DO WE LIVE TOGETHER - PICTURE SERIES",
+            "series_name": "HOW DO WE LIVE TOGETHER",
             "series_desc": "This series in the Community Connections library opens young eyes to the bustling world around them and gently encourages early learning. Boys and girls will see how animal mothers care for their young, where the various creatures live, what they eat and how they behave. Readers are encouraged to think critically about how we share our back yards with these fascinating animals.",
             "series_table_name": "howdowelivetogether",
             "no_of_books": "8",

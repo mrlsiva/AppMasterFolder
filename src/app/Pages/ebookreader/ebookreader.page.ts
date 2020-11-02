@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
 
+import { Router, NavigationExtras } from '@angular/router';
+import { GlobalService } from '../../Service/global.service';
+
 @Component({
   selector: 'app-ebookreader',
   templateUrl: './ebookreader.page.html',
@@ -20,7 +23,7 @@ export class EbookreaderPage implements OnInit {
     loop: true
   };
   public bannerImages = [{"path" : "assets/images/ebookBanner/banner-1.jpg"},{"path" : "assets/images/ebookBanner/banner-2.jpg"},{"path" : "assets/images/ebookBanner/banner-3.jpg"},{"path" : "assets/images/ebookBanner/banner-4.jpg"}];
-  constructor(public http: HttpClient) { }
+  constructor(private router: Router,public http: HttpClient, public global: GlobalService) { }
 
   ngOnInit() {
     this.getHomeEducationBanner()
@@ -46,5 +49,10 @@ export class EbookreaderPage implements OnInit {
   }
   getEbookReaderData() {
     return this.http.get('assets/data/ebookReader.json');
+  }
+
+  openViewMorePage() {
+    this.global.setPageName('ebookReader');
+    this.router.navigate(['/viewmorebooks']);
   }
 }
