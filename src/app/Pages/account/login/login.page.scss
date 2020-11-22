@@ -1,6 +1,29 @@
 .loginCnt {
+    --background: url('../../../../assets/images/general/loginBg.jpg') no-repeat 100% 100%;
     .appLogoLogin {
         width: 70%;
+    }
+    .overViewLogin {
+//        -webkit-box-shadow: 0px 0px 0px 7px rgb(223 223 223 / 61%);
+// -moz-box-shadow: 0px 0px 0px 7px rgb(223 223 223 / 61%);
+// box-shadow: 0px 0px 0px 7px rgb(223 223 223 / 61%);
+margin-top: 3rem;
+    }
+    .loginIcon {
+        max-width: 3rem;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 0.6rem;
+        border-radius: 50%;
+        border: 1px solid #ebebeb;
+    }
+    .loginIcon img {
+        max-width: 100%;
+    }
+    .loginForm {
+        //background: #e21717;
     }
     .loginLock {
         background: rgb(244, 245, 243);
@@ -22,4 +45,14 @@
             --highlight-color-focused:  #e43750 !important;
         }
     }
+    .memberClass {
+        position: fixed;
+        bottom: 50px;
+        // text-align: center !important;
+        left: 35%;
+        color: white;
+        font-weight: bold;
+
+    }
+    
 }

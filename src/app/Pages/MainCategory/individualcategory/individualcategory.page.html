@@ -4,12 +4,12 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>
-      <p>Kids Can Recycle</p></ion-title>
+      <p>{{data.book_title}}</p></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <!-- <ion-card>
     <img class="img" src="../../../../assets/images/general/thumb_146.jpg">
     <ion-card-content>
       <div class='detail-title'>
@@ -29,7 +29,7 @@
           <li> Graphics: Full Color Photographs</li>
 
         </ul>
-        <!-- <button>Login & Add to cart</button> -->
+        
         <div class="ion-text-center">
           <ion-button class="buttonClass">Login & Add to cart</ion-button>
         </div>
@@ -40,8 +40,48 @@
         <div class="ion-text-justify">Level 3 guided reader that helps teach students the importance of keeping water clean and gives practical ideas on things they can do to pitch in.</div>
     </ion-card-content>
     
-  </ion-card>
+  </ion-card> -->
   <!-- <ion-fab left bottom>
     <button ion-fab class="fab"><ion-icon name="arrow-dropleft"></ion-icon></button>
   </ion-fab> -->
+  <ion-card >
+    <img class="img" src={{data.thumb_img}}>
+    <ion-card-content>
+      <div class='detail-title'>
+        {{data.book_title}}
+      </div>
+      <div class='detail-price'>
+        PRICE : {{data.offer_price}}
+      </div>
+        <ul class="ul-style" *ngFor="let list of data.product_details; let i = index">
+          <li>{{list}}</li>
+        </ul>
+        <!-- <button>Login & Add to cart</button> -->
+        <div class="ion-text-center">
+          <ion-button class="buttonClass">Login & Add to cart</ion-button>
+        </div>
+        
+        <div class="detail-price description">
+          Description
+        </div>
+        <div class="ion-text-justify">{{data.description}}</div>
+    </ion-card-content>
+    
+  </ion-card>
+  <p class="slider-title">Related products</p>
+  <ion-grid *ngIf='data'>
+    <ion-row >
+    <ion-col *ngFor="let list of data.relatedProducts; let i = index" size="6">
+    <ion-item (click)="getrelatedItem(list)">
+      <div class="related-item">
+      <img class="img" src={{list.thumb_img}}>
+        <p>{{list.book_title}}</p>
+        <p >Price : {{list.offer_price}}</p>
+        <ion-button class="ion-button">Add to Cart</ion-button>
+      </div>
+    </ion-item>
+    </ion-col>
+    
+    </ion-row>
+    </ion-grid>
 </ion-content>

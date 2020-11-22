@@ -10,8 +10,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div *ngIf="displayInd">
   <div padding-top padding-bottom>
-    <ion-slides loop="true" pager="false" [options]="slideOpts">
+    <ion-slides loop="true" pager="false" [options]="slideOptsOne">
       <ion-slide *ngFor="let image of bannerImages">
         <img src="{{image.path}}">
       </ion-slide>
@@ -22,15 +23,15 @@
       <ion-row *ngFor="let list of categoriesData; let i = index">
         <ion-col>
           <div (click)="openViewMorePage()">
-            <p class="slider-title">{{list[i].series_name}}</p> 
+            <p class="slider-title">{{list.category.series_name}}</p> 
           </div>
           <ion-slides  [options]="slideOpts">
-            <ion-slide  class="slide-card" *ngFor="let item of list" (click)="navigate(item)">
+            <ion-slide  class="slide-card" *ngFor="let item of list.products" (click)="navigate(item)">
               <div >
                 <ion-thumbnail  class="thumb-image" slot="start">
                   <ion-img [src]="item.thumb_img"></ion-img>
                 </ion-thumbnail>
-                <h5 class="show_two_line">{{item.series_name}}</h5>
+                <h5 class="show_two_line">{{item.book_title}}</h5>
                 <ion-button>View Details</ion-button>
               </div>
             </ion-slide>
@@ -63,4 +64,62 @@
     </ion-row>
   </ion-grid>
 </div> -->
+</div>
+<div *ngIf="!displayInd">
+  <div class="ion-padding custom-skeleton">
+    <ion-skeleton-text animated style="width: 100%; height: 70px;"></ion-skeleton-text>
+    <ion-skeleton-text animated></ion-skeleton-text>
+    <ion-skeleton-text animated></ion-skeleton-text>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-skeleton-text animated style="width: 100%; height: 100px;"></ion-skeleton-text>
+      </ion-col>
+      <ion-col>
+        <ion-skeleton-text animated style="width: 100%; height: 100px;"></ion-skeleton-text>
+      </ion-col>
+      <ion-col>
+        <ion-skeleton-text animated style="width: 100%; height: 100px;"></ion-skeleton-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-skeleton-text animated style="width: 100%; height: 100px;"></ion-skeleton-text>
+      </ion-col>
+      <ion-col>
+        <ion-skeleton-text animated style="width: 100%; height: 100px;"></ion-skeleton-text>
+      </ion-col>
+      <ion-col>
+        <ion-skeleton-text animated style="width: 100%; height: 100px;"></ion-skeleton-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-skeleton-text animated style="width: 100%; height: 100px;"></ion-skeleton-text>
+      </ion-col>
+      <ion-col>
+        <ion-skeleton-text animated style="width: 100%; height: 100px;"></ion-skeleton-text>
+      </ion-col>
+      <ion-col>
+        <ion-skeleton-text animated style="width: 100%; height: 100px;"></ion-skeleton-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>    
+</div>
 </ion-content>

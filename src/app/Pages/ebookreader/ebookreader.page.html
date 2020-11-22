@@ -10,7 +10,8 @@
 </ion-header>
 
 <ion-content class="ebookContent" [fullscreen]="true">
-  <div padding-top padding-bottom>
+  <div *ngIf="eBookList">
+    <div padding-top padding-bottom>
     <ion-slides loop="true" pager="false" [options]="slideOpts">
       <ion-slide *ngFor="let image of bannerImages">
         <img src="{{image.path}}">
@@ -20,21 +21,35 @@
   <div>
     <img src="assets/images/ebookBanner/{{eBookBannerTop}}.jpg">
   </div>
+  
   <div>
     <ion-grid class="ion-text-left ion-no-padding ebookrows">
-      <ion-row *ngFor="let ebook of ebookReaderDatas"  (click)="openViewMorePage()">
-        <ion-col>
+      <ion-row  *ngFor="let item of eBookList; index as i"  (click)="openViewMorePage(item)">
+        
+        <ion-col size="2" class="ion-text-center ion-margin-top">
+          <p>{{i+1}}</p>
+        </ion-col>
+        <ion-col size="10">
           <ion-row>
-            <ion-col><p>{{ebook.series_name}}</p></ion-col>
+            <ion-col><p>{{item.category.series_name}}</p></ion-col>
           </ion-row>
           <ion-row class="bottomRow">
-            <ion-col><p>No.Of Books: {{ebook.no_of_books}}</p></ion-col>
-            <ion-col><p>Age Group: {{ebook.age_group}}</p></ion-col>
+            <ion-col><p>No.Of Books: {{item.category.no_of_books}}</p></ion-col>
+            <ion-col><p>Age Group: {{item.category.age_group}}</p></ion-col>
           </ion-row>
         </ion-col>
       </ion-row>
     </ion-grid>
   </div>
+  <!-- <div>
+    <ion-grid>
+      <ion-row *ngFor="let item of eBookList">
+        <ion-col>
+          <p>{{item.series_name}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div> -->
   <div>
     <img src="assets/images/ebookBanner/{{eBookBannerBottom}}.jpg">
   </div>
@@ -51,5 +66,15 @@
   <div>
     <img src="assets/images/ebookBanner/Layout-02.jpg">
   </div>
+</div>
+<!-- <div>
+  <ion-grid>
+    <ion-row *ngFor="let item of ebookReaderDatas">
+      <ion-col>
+        <p>{{item.categories}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div> -->
 </ion-content>
 

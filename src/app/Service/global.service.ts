@@ -60,12 +60,7 @@ export class GlobalService {
   
 
   getHomeCategories(){
-    //let headers = new HttpHeaders();
-    //headers = headers.append('Content-Type','application/json');
-    console.log('step 2');
-    let Data={"displayCategories":this.categories}
-    console.log("Data "+JSON.stringify(Data)); 
-    return this.http.post(this.url,JSON.stringify(Data));
+    return this.http.get("https://littleprodigybooks.com/api/home");
 
   }
 

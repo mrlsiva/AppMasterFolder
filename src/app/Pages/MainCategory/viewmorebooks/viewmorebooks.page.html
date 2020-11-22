@@ -3,12 +3,12 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Kids Can Recycle</ion-title>
+    <ion-title><p>{{title}}</p></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="viewMoreBooks">
+  <!-- <div class="viewMoreBooks">
     <ion-grid class="ion-text-center">
       <ion-row>
         <ion-col  *ngFor="let books of global.viewMoreBooks" size="6"  [routerLink]="['/individualcategory']">
@@ -17,6 +17,43 @@
           <div *ngIf="displayInd">
             <p class="ion-text-left">Age Group : {{books.age}}</p>
             <p class="ion-text-left">Price : {{books.Price}}</p>
+            <ion-button class="buttonClass" [routerLink]="['/individualcategory']">View Product</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div> -->
+
+  
+  <div>
+    <div>
+      <ion-grid class="ion-text-justify">
+        <ion-row class="ion-padding descripton" (click)="openDescription()">
+          <ion-col size="10">
+            <h5 class="ion-no-margin">Short Description</h5>
+          </ion-col>
+          <ion-col size="2" class="ion-text-right">
+            <ion-icon [name]=iconName></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="displayDes">
+          <ion-col>
+              <p>{{eBookCategory.category.series_desc}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    
+  </div>
+  <div class="viewMoreBooks">
+    <ion-grid class="ion-text-center">
+      <ion-row>
+        <ion-col  *ngFor="let books of eBookCategory.products" size="6" (click)="openReadBookPage(books)">
+          <img src="{{books.thumb_img}}" />
+          <p class="ion-no-padding ion-no-margin">{{books.book_title}}</p>
+          <div *ngIf="displayInd">
+            <p class="ion-text-left">Age Group : {{eBookCategory.category.age_group}}</p>
+            <p class="ion-text-left">Price : {{books.actual_price}}</p>
             <ion-button class="buttonClass" [routerLink]="['/individualcategory']">View Product</ion-button>
           </div>
         </ion-col>

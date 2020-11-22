@@ -3,15 +3,19 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Our Distributorship</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-text-justify">
-  <!-- <div class="col-12 about-p"> <p>We are pleased to be able to provide access to e-books & Physical books from the world-renowned publishing programs of our partner presses via Aries Books International, India & Cherry Lake Publishing, USA. These titles cover subjects from all disciplines across the fields of science, technology and medicine, as well as humanities and social sciences. </p>
+  <div *ngIf="isDistributorship">
+  <div class="col-12 about-p"> 
+    <p>We are pleased to be able to provide access to e-books & Physical books from the world-renowned publishing programs of our partner presses via Aries Books International, India & Cherry Lake Publishing, USA. These titles cover subjects from all disciplines across the fields of science, technology and medicine, as well as humanities and social sciences. </p>
     <p>Making a unique contribution to the world of scholarship, our e-book partner publishing program sets new standards for the integration of key schools’ academic content. It offers all users a new dimension of access and usability, supporting and enhancing research. </p>
     <p>Access to these partner publisher titles through Aries Books & Cherry Lake is available to libraries worldwide under a number of attractive and flexible models, ensuring instant access to the best research available.
-     </p></div>
+     </p>
+  </div>
+    
      <div >
      <table class="table">
       <thead>
@@ -48,14 +52,16 @@
       </tbody>
     </table>
     </div>
-  </div> -->
+  </div>
+  <div *ngIf="!isDistributorship">
     <div class="col-12 about-p">
       <p>We are pleased to be able to provide access to e-books & Physical books from the world-renowned publishing programs of our partner presses via Aries Books International, India & Cherry Lake Publishing, USA. These titles cover subjects from all disciplines across the fields of science, technology and medicine, as well as humanities and social sciences. </p>
- <p>Making a unique contribution to the world of scholarship, our e-book partner publishing program sets new standards for the integration of key schools’ academic content. It offers all users a new dimension of access and usability, supporting and enhancing research.
-  </p>
- <p>Access to these partner publisher titles through Aries Books & Cherry Lake is available to libraries worldwide under a number of attractive and flexible models, ensuring instant access to the best research available.
-  </p></div>
+    <p>Making a unique contribution to the world of scholarship, our e-book partner publishing program sets new standards for the integration of key schools’ academic content. It offers all users a new dimension of access and usability, supporting and enhancing research.
+      </p>
+    <p>Access to these partner publisher titles through Aries Books & Cherry Lake is available to libraries worldwide under a number of attractive and flexible models, ensuring instant access to the best research available.
+      </p></div>
   <div class="row">
     <img src="https://littleprodigybooks.in/resources/img/dist.png" class="img-responsive img-fluid">
-      </div> 
+      </div>
+    </div> 
 </ion-content>
