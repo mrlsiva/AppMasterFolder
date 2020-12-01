@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div>
+      <img src="assets/images/ebookBanner/logo.png" class="appLogo">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <div *ngIf="!cartViewInd">
+      <ion-card>
+        <ion-card-header class="ion-text-center">
+          <ion-icon name="cart-outline" class="cartIcon"></ion-icon>
+          <ion-card-title>Your Basket is empty</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content class="ion-text-center">
+          <p><a href="#" class="browseBooks">Browse More Books</a></p>
+        </ion-card-content>
+      </ion-card>
+      
+    </div>
+    <div *ngIf="cartViewInd">
+      <ion-grid>
+        <ion-row class="ion-text-center headerRow">
+          <ion-col size="5"><p>Product</p></ion-col>
+          <ion-col size="3"><p>Quantity</p></ion-col>
+          <ion-col size="2"><p>Price</p></ion-col>
+          <ion-col size="2"><p>Total</p></ion-col>
+        </ion-row>
+        <ion-row class="ion-text-center">
+          <ion-col size="5"  class="thumbImg">
+            <img src={{individualCategoryDetails.thumb_img}}>
+            <p>{{individualCategoryDetails.book_title}}</p>
+          </ion-col>
+          <ion-col size="3"><p>1</p></ion-col>
+          <ion-col size="2"><p>{{individualCategoryDetails.actual_price}}</p></ion-col>
+          <ion-col size="2"><p>{{individualCategoryDetails.actual_price}}</p></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6"></ion-col>
+          <ion-col size="3" class="text-align-center"><p>Total</p></ion-col>
+          <ion-col size="3"><p>{{individualCategoryDetails.actual_price}}</p></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="7"><ion-button class="buttonClass">Continue Shopting</ion-button></ion-col>
+          <ion-col size="5" (click)="payThroughRazorPar()"><ion-button class="buttonClass">Checkout</ion-button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

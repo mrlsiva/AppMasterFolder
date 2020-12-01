@@ -15,6 +15,6 @@ import { MembershipComponent } from '../../../appComponents/membership/membershi
     IonicModule,
     LoginPageRoutingModule
   ],
-  declarations: [LoginPage,MembershipComponent]
+  declarations: [LoginPage]
 })
 export class LoginPageModule {}

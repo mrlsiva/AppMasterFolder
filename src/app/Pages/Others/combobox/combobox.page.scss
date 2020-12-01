@@ -1,0 +1,186 @@
+.thumb-image {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.border-image {
+    border-radius: 5px;
+}
+
+.border-image:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    // linear-gradient(to bottom, rgb(0 47 75 / 0%) 0%, rgb(0 0 0 / 50%) 100%)
+    background: rgb(0, 0, 0);
+    background: linear-gradient(183deg, rgba(0, 0, 0, 0) 70%, #1e1e1e 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+    /* IE6-9 */
+}
+
+.highlighted {
+    // background-color: green;
+    opacity: 0.5;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    // padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.float-left select {
+    width: 100%;
+    text-align: center;
+    float: left;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+.float-left button {
+    width: 49%;
+    text-align: center;
+    float: left;
+    padding: 1rem;
+    margin: 0.5%;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999999;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.w-100,
+h2,
+p {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    p,
+    h2 {
+        margin: 0;
+    }
+}
+
+.w-100 img {
+    // width: 100%;
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+#el01 option {
+    width: 20em
+}
+
+
+/* Width */
+
+#el02 option {
+    /* Text and background colour, blue on light gray */
+    color: #00f;
+    background-color: #ddd;
+}
+
+#el03 option {
+    background: url(/i/icon-info.gif) no-repeat 100% 50%
+}
+
+
+/* Background image */
+
+#el04 option {
+    border-width: 6px
+}
+
+
+/* Border width */
+
+#el05 option {
+    border: 2px dotted #00f
+}
+
+
+/* Border width, style and colour */
+
+#el06 option {
+    border: none
+}
+
+
+/* No border */
+
+#el07 option {
+    font-family: "Courier New", Courier
+}
+
+
+/* Different font */
+
+#el08 option {
+    font-size: 2em
+}
+
+
+/* Bigger text */
+
+#el09 option {
+    font-size: 0.5em
+}
+
+
+/* Smaller text */
+
+#el10 option {
+    font-weight: bold
+}
+
+
+/* Bold text */
+
+#el11 option {
+    padding: 1em
+}
+
+
+/* Increase padding */
+
+#el12 option {
+    text-align: right
+}
+
+
+/* Change text alignment */
+
+[selected] {
+    /* Text colour and font weight, red and bold */
+    color: #f00;
+    font-weight: bold;
+}

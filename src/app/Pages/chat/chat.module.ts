@@ -17,6 +17,6 @@ import { MembershipComponent } from '../../appComponents/membership/membership.c
     ChatPageRoutingModule,
     
   ],
-  declarations: [ChatPage, MembershipComponent]
+  declarations: [ChatPage]
 })
 export class ChatPageModule {}

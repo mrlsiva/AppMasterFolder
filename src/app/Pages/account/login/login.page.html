@@ -14,32 +14,33 @@
     <img src="assets/images/general/lock.png">
   </div>
   <div class="ion-margin-top loginForm">
-    <form>
+    
       <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input></ion-input>
-        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-input [(ngModel)]="userInfo.email" type="text"></ion-input>
+        <ion-icon name="mail" slot="start"></ion-icon>
       </ion-item>
       <br>
       <ion-item>
         <ion-label position="floating">Password</ion-label>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="userInfo.password" [type]="textType"></ion-input>
         <ion-icon name="lock-closed" slot="start"></ion-icon>
+        <ion-icon class="ion-margin-top" [name]="displayPwdIconName" slot="end" (click)="displayPasswordIcon()"></ion-icon>
       </ion-item>
       <!-- <ion-item lines="none">
         <ion-label>Remember Me</ion-label>
         <ion-checkbox slot="start"></ion-checkbox>
       </ion-item> -->
       <div class="ion-margin-top ion-text-center">
-        <ion-button class="buttonClass">Login</ion-button>
+        <ion-button class="buttonClass" (click)="doLogin()">Login</ion-button>
       </div>
       <!-- <ion-item lines="none"  [routerLink]="['/register']">
         <ion-label>Not Registered? <a>Create a new account </a></ion-label>
       </ion-item> -->
       <ion-item lines="none" class="ion-text-center">
-        <ion-label>Lost Your Password?</ion-label>
+        <ion-label  [routerLink]="['/forgetpassword']">Lost Your Password?</ion-label>
       </ion-item>
-    </form>
+    
   </div>
 </div>
   <div class="memberClass" [routerLink]="['/register']">

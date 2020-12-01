@@ -17,6 +17,7 @@ export class ViewmorebooksPage implements OnInit {
   public title: any;
   public displayDes = false;
   public iconName = "chevron-forward-outline";
+  public bookPages: any;
 
   constructor(public global: GlobalService, 
               private router: Router,
@@ -42,13 +43,28 @@ export class ViewmorebooksPage implements OnInit {
 
   openReadBookPage(book: any) {
     console.log(book.categories_id, book.sku);
-    this.auth.getReadBookData(book.categories_id, book.sku).then((data: any) => {
-      this.global.setBookName(book.book_title);
-      this.router.navigate(['/readselectedbook']);
-      console.log(data);
-    }).catch((error) => {
-      console.log(error);
-    })
+
+    let userInfo: any = localStorage.getItem('login_Info');
+    console.log(userInfo);
+    if(JSON.parse(userInfo)) {
+      if(JSON.parse(userInfo).data.subscribed_user == 1) {
+        this.auth.getReadBookData(book.categories_id, book.sku).then((data: any) => {
+          this.global.setBookName(book.book_title);
+          this.router.navigate(['/readselectedbook']);
+          this.bookPages = data;
+          console.log(data);
+        }).catch((error) => {
+          console.log(error);
+        })
+      } else if(JSON.parse(userInfo).data.offline_user == 1) {
+
+      } else{
+        this.router.navigate(['/membershipaccount'])
+      }
+    } else {
+      this.router.navigate(['/login']);
+    }
+    
   }
 
   openDescription() {

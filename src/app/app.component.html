@@ -4,7 +4,7 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Welcome!</ion-list-header>
-          <ion-note>User name</ion-note>
+          <ion-note>{{global.userName}}</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <!-- <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i"> -->
@@ -32,9 +32,13 @@
       </ion-content>
       <ion-footer>
         <ion-menu-toggle>
-          <ion-item lines="none" routerDirection="root" (click)="openLoginPage()">
+          <ion-item lines="none" routerDirection="root" (click)="openLoginPage()" *ngIf="!global.enableLogOut">
             <!-- <ion-icon slot="start"  name="log-out"></ion-icon> -->
             <ion-label class="ion-text-center">Login</ion-label>
+          </ion-item>
+          <ion-item lines="none" routerDirection="root" (click)="logout()" *ngIf="global.enableLogOut">
+            <!-- <ion-icon slot="start"  name="log-out"></ion-icon> -->
+            <ion-label class="ion-text-center">Logout</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-footer>

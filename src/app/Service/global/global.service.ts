@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import { resolve } from 'dns';
-import { promise } from 'protractor';
 
 @Injectable({
   providedIn: 'root'
@@ -12,15 +10,30 @@ export class GlobalService {
   public pageName: any;
   public eBookData: any;
   public dataUrl = 'http://slinggroups.in/demo/littleprodigybook/api/home';
-  public dataUrlNew = "https://littleprodigybooks.com/api/home";
+  public dataUrlNew = "https://littleprodigybooks.in/api/home";
   public eBookCategory: any;
   public bookName: any;
   public isDistributorship:any;
   public islibraryCatalogue: any;
-
-  constructor(private http: HttpClient) { }
-
+  public individualCategoryData: any;
+  public isFirstTime: boolean = true;
+  public loginDetails: any;
+  public enableLogOut = false;
+  public userName: any;
   
+  constructor(private http: HttpClient) {
+    if(this.getLoginInfo()) {
+      this.enableLogOut = true;
+    } else {
+      this.enableLogOut = false;
+    }
+  }
+
+  async setIndividualCategory(individualCategory: any) {
+    console.log(this.individualCategoryData);
+    this.individualCategoryData = individualCategory;
+  }
+
   setPageName(name: any) {
     this.pageName = name;
   }
@@ -42,5 +55,11 @@ export class GlobalService {
   }
   setBookName(bookName: any) {
     this.bookName = bookName
+  }
+
+  getLoginInfo() {
+    this.loginDetails = JSON.parse(localStorage.getItem('login_Info'));
+    //console.log(this.loginDetails);
+    return this.loginDetails;
   }
 }

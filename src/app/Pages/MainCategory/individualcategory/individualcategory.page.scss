@@ -1,9 +1,10 @@
-.card{
-border: none !important;
-border-bottom: 2px solid;
-padding: 1em !important;
+.card {
+    border: none !important;
+    border-bottom: 2px solid;
+    padding: 1em !important;
 }
-.e-book-button{
+
+.e-book-button {
     color: white;
     padding: 15px 25px;
     width: 60%;
@@ -12,22 +13,42 @@ padding: 1em !important;
     background-color: #e43750 !important;
     margin: 5px;
     border-radius: 5px !important;
-  }
+}
 
-
-  .ul-style{
-    list-style-type:none;
+.ul-style {
+    list-style-type: none;
     margin-left: -40px;
-  }
-  .img{
-      width: 100%;
-  }
-  .detail-title{
-      color: black;
-      font-weight: bold;
-      font-size: larger;
-  }
-  .fab{
+}
+
+.img {
+    width: 100%;
+}
+
+.pt-1 {
+    margin: 0;
+    padding: 0;
+}
+
+.buttonClass {
+    color: white;
+    --background: #e43750;
+    width: 92%;
+}
+
+p.slider-title {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+
+.detail-title {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.fab {
     top: 80%;
     background-color: #e43750;
     width: 50px;
@@ -35,9 +56,10 @@ padding: 1em !important;
     text-align: center;
     line-height: 42px;
     border-radius: 50%;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.25)!important;
-  }
-  .desc-view{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25)!important;
+}
+
+.desc-view {
     color: white;
     padding: 10px 25px;
     width: 100%;
@@ -45,10 +67,17 @@ padding: 1em !important;
     text-decoration: none;
     background-color: #e43750 !important;
     margin: 5px;
-  }
-  .detail-price{
+}
+
+.detail-price {
     color: black;
     font-weight: bold;
     font-size: large;
     margin-top: 5px;
+}
+
+.p-tag {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }

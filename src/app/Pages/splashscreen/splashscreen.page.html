@@ -1,0 +1,24 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>splashscreen</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div>
+    <div>
+      <ion-slides pager="false">
+        <ion-slide *ngFor="let image of firstTimeDisplayImg; index as i">
+          <img src="{{image.path}}">
+          <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="i==firstTimeDisplayImg.length-1"  (click)="openRootPage()">
+            <ion-fab-button color="danger">
+              <!-- <ion-icon name="add"></ion-icon> -->
+              Start
+            </ion-fab-button>
+          </ion-fab>
+        </ion-slide>
+      </ion-slides>
+      
+    </div>
+  </div>
+</ion-content>
