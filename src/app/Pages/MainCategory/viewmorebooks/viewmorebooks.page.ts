@@ -17,12 +17,12 @@ export class ViewmorebooksPage implements OnInit {
   public title: any;
   public displayDes = false;
   public iconName = "chevron-forward-outline";
+  public bookPages: any;
 
   constructor(public global: GlobalService, 
               private router: Router,
               public auth: AuthService,
               public http: HttpClient) {
-    // alert(this.global.pageName);
     if(this.global.pageName == 'homePage'){
       this.displayInd = true;
     } else {
@@ -42,13 +42,28 @@ export class ViewmorebooksPage implements OnInit {
 
   openReadBookPage(book: any) {
     console.log(book.categories_id, book.sku);
-    this.auth.getReadBookData(book.categories_id, book.sku).then((data: any) => {
-      this.global.setBookName(book.book_title);
-      this.router.navigate(['/readselectedbook']);
-      console.log(data);
-    }).catch((error) => {
-      console.log(error);
-    })
+
+    let userInfo =  this.global.getLoginInfo();
+    console.log(userInfo);
+    if(userInfo != '') {
+      if(userInfo.subscribed_user == 1) {
+        this.auth.getReadBookData(book.categories_id, book.sku).then((data: any) => {
+          this.global.setBookName(book.book_title);
+          this.router.navigate(['/readselectedbook']);
+          this.bookPages = data;
+          console.log(data);
+        }).catch((error) => {
+          console.log(error);
+        })
+      } else if(userInfo.offline_user == 1) {
+
+      } else{
+        this.router.navigate(['/membershipaccount'])
+      }
+    } else {
+      this.router.navigate(['/login']);
+    }
+    
   }
 
   openDescription() {

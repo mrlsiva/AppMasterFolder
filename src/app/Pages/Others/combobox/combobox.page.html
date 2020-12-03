@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+      <ion-title>ComboBox</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+      <div class="row text-center w-100">
+          <img id="img_" class="person-img" src="{{combo_img}} ">
+      </div>
+      <div class="row text-center w-100">
+          <h2 id="who_message" class="card-title">{{combo_title}}</h2>
+          <p>You Can Chose Upto <span id="box-books">{{book_count}}</span> Books</p>
+      </div>
+  </div>
+
+  <div class="container float-left w-100 ">
+      <div class="row custom-select-box">
+          <select ng-model='nrSelect' class='form-control' #comboSelect (change)=onComboSelected(comboSelect.value)>                                                                
+    <option value=1>King Box</option>
+    <option value=2>Queen Box</option>
+    <option value=3>Knight Box</option>
+    <option value=4>Warden Box</option>
+</select>
+          <select class='form-control' #mySelect (change)='onOptionsSelected(mySelect.value)'>                                                                
+<option  *ngFor="let item of boxData; let i = index;"  [value]="item.category.id">{{item.category.series_name}}</option>
+</select>
+      </div>
+  </div>
+
+
+  <div class="container float-left w-100 fixed-bottom ">
+
+      <button type="button" class="button">
+Book(s) Chosen  <span class="badge badge-light">{{book_selected}}</span>
+</button>
+      <div class="form-group col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <button type="button" class="button">
+Login & Add to Cart
+</button>
+      </div>
+  </div>
+
+  <ion-grid>
+      <ion-row>
+          <ion-col *ngFor="let list of category_select; let i = index" (click)="multiSelect(list)" [class.highlighted]="highlightedBatch.indexOf(list) !== -1" size="6">
+              <ion-item>
+                  <ion-thumbnail class="thumb-image" slot="start">
+                      <ion-img [src]="list.thumb_img"></ion-img>
+                      <p>{{list.book_title}}</p>
+                  </ion-thumbnail>
+                  <!-- <div class="related-item">
+    <img class="img" src={{list.thumb_img}}>
+      <p>{{list.book_title}}</p>
+      <p >Price : {{list.offer_price}}</p>
+      <ion-button class="ion-button">Add to Cart</ion-button>
+    </div> -->
+              </ion-item>
+          </ion-col>
+
+      </ion-row>
+  </ion-grid>
+</ion-content>

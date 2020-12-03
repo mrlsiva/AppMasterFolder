@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Router, NavigationExtras } from '@angular/router';
+import { NavController } from '@ionic/angular';
+import { Router, NavigationExtras,  } from '@angular/router';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AlertController } from '@ionic/angular';
-import { GlobalService } from './Service/global/global.service'
+import { GlobalService } from './Service/global/global.service';
+import { AccountService } from './Service/account/account.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -64,17 +67,26 @@ export class AppComponent implements OnInit {
       title: 'Terms & Conditions',
       url: '/terms',
       icon: 'warning'
+    },
+    {
+      title: 'ComboBox',
+      url: '/combobox',
+      icon: 'warning'
     }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   public alertShown = false;
+  
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private router: Router,
     public alertController: AlertController,
-    public global: GlobalService
+    public global: GlobalService,
+    private navCtrl: NavController,
+    public account: AccountService
   ) {
     this.initializeApp();
   }
@@ -84,6 +96,14 @@ export class AppComponent implements OnInit {
       console.log('this.router.url', this.router.url);
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      //this.navCtrl.setDirection('root');
+      if(localStorage.getItem('isFirstTime') != null || localStorage.getItem('isFirstTime') == 'true') {
+        this.router.navigate(['/tab/home']);
+      } else {
+        this.router.navigate(['/splashscreen']);
+        
+      }
+      
       this.platform.backButton.subscribeWithPriority(0, () => {
        // navigator['app'].exitApp();
        if(window.location.pathname == '/tab/chat' ||
@@ -101,10 +121,17 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('this.router.url', window.location.pathname);
-    const path = window.location.pathname.split('folder/')[1];
-    if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+    // console.log('this.router.url', window.location.pathname);
+    // const path = window.location.pathname.split('folder/')[1];
+    // if (path !== undefined) {
+    //   this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+    // }
+    console.log(this.global.userName);
+    let userInfo = this.global.getLoginInfo();
+    if(userInfo != '') {
+      this.global.userName = userInfo.name;
+    } else {
+      this.global.userName = "Guest User";
     }
   }
   sideMenuPage(url: any) {
@@ -155,5 +182,25 @@ export class AppComponent implements OnInit {
     });
 
     await alert.present();
+  }
+
+  logout() {
+    //localStorage.clear();
+    this.global.clearLocalStorageLoginInfo();
+    this.global.enableLogOut = false;
+    this.global.userName = "Guest User";
+    this.router.navigateByUrl('tab/home',{ replaceUrl: true });
+    // this.account.logout().then((data: any) => {
+    //   if(data.success == true) {
+    //     localStorage.clear();
+    //     this.global.enableLogOut = false;
+    //     this.global.userName = "Guest User";
+    //     this.router.navigateByUrl('tab/home',{ replaceUrl: true });
+    //   } else {
+    //     this.global.enableLogOut = true;
+    //   }
+    // }).catch((error) => {
+    //   alert(JSON.stringify(error));
+    // })
   }
 }

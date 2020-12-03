@@ -61,6 +61,22 @@ const routes: Routes = [
   {
     path: 'catalogue',
     loadChildren: () => import('./Pages/Others/catalogue/catalogue.module').then( m => m.CataloguePageModule)
+  },
+  {
+    path: 'cartview',
+    loadChildren: () => import('./Pages/cartview/cartview.module').then( m => m.CartviewPageModule)
+  },
+  {
+    path: 'forgetpassword',
+    loadChildren: () => import('./Pages/account/forgetpassword/forgetpassword.module').then( m => m.ForgetpasswordPageModule)
+  },
+  {
+    path: 'splashscreen',
+    loadChildren: () => import('./Pages/splashscreen/splashscreen.module').then( m => m.SplashscreenPageModule)
+  },
+  {
+    path: 'combobox',
+    loadChildren: () => import('./Pages/Others/combobox/combobox.module').then( m => m.ComboboxPageModule)
   }
 
 

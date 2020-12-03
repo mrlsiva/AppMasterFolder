@@ -8,8 +8,8 @@ import { AuthService } from '../../Service/auth/auth.service';
 })
 export class ReadebookComponent implements OnInit {
   datas = [
-    {src:"./assets/image/book3/0001.jpg", thumb:"./assets/image/book1/0001.jpg", title:"Page two"},
-    {src:"./assets/image/book3/0003.jpg", thumb:"./assets/image/book1/0004.jpg", title:"Cover"},
+    {src:"https://littleprodigybooks.in/storage/app/public/uploads/book/book_470.pdf/0001.jpg", thumb:"./assets/image/book1/0001.jpg", title:"Page two"},
+    {src:"https://littleprodigybooks.in/storage/app/public/uploads/book/book_470.pdf/0001.jpg", thumb:"./assets/image/book1/0004.jpg", title:"Cover"},
     {src:"./assets/image/book3/0005.jpg", thumb:"./assets/image/book1/0006.jpg", title:"Page two"},
     {src:"./assets/image/book3/0006.jpg", thumb:"./assets/image/book1/0007.jpg", title:"Page three"},
     {src:"./assets/image/book3/0007.jpg", thumb:"./assets/image/book1/0005.jpg", title:"Page two"},
@@ -44,7 +44,7 @@ export class ReadebookComponent implements OnInit {
   ]
   public eBookImages = [];
   constructor(public auth: AuthService) {
-    console.log(this.auth.readBookData.book_pages);
+    //console.log(this.auth.readBookData.book_pages);
     this.auth.readBookData.book_pages.forEach(element => {
       this.eBookImages.push({
             src: element,
@@ -55,8 +55,8 @@ export class ReadebookComponent implements OnInit {
       
       
     });
-    console.log(this.eBookImages);
-    this.loadimage(this.datas);
+    //console.log(this.eBookImages);
+    this.loadimage(this.eBookImages);
     // setTimeout(() => {
     //   console.log(this.datas);
       
@@ -77,9 +77,9 @@ export class ReadebookComponent implements OnInit {
   loadimage(datas: any) {
     setTimeout(() => {
       $(document).ready(function () {
-        console.log(JSON.stringify(datas));
+        //console.log(JSON.stringify(datas));
         $('#container').flipBook({pages: datas})
       });
-    }, 5000);
+    }, 3000);
   }
 }

@@ -10,89 +10,45 @@
   <!-- <h3>MEMBERSHIP PLAN</h3> -->
   <div>
     <ion-slides pager="true">
-      <ion-slide>
+      <ion-slide *ngFor="let plan of membershipPlan">
         <ion-card>
           <ion-grid class="listPlan ion-padding-top">
             <ion-row>
               <ion-col>
                 <div class="membershipImg" >
-                  <img src="../../../assets/images/general/feather.png"/>
+                  <img src="{{plan.img}}"/>
                 </div>
               </ion-col>
             </ion-row>
             <br>
             <ion-row class="basicRow">
               <ion-col>
-                <h1>BASIC</h1>
+                <h1>{{plan.planName}}</h1>
               </ion-col>
             </ion-row>
             <ion-row class="basicAmt">
               <ion-col>
-                <h1>&#8377; 500</h1>
+                <h1>&#8377; {{plan.amount}}</h1>
               </ion-col>
             </ion-row>
             <ion-row class="planSupport">
               <ion-col>
-                  <h6>GET PLAN FOR TWO YEAR</h6>
+                  <h6>{{plan.validity}}</h6>
               </ion-col>
             </ion-row>
             <ion-row class="planSupport">
               <ion-col>
-                  <h6>READ ALL E-BOOK</h6>
+                  <h6>{{plan.description}}</h6>
               </ion-col>
             </ion-row>
             <ion-row class="planSupport">
               <ion-col>
-                  <h6>24/7 SUPPORT</h6>
+                  <h6>{{plan.support}}</h6>
               </ion-col>
             </ion-row>
             <ion-row class="planSupport">
               <ion-col>
-                  <ion-button class="buttonClass" (click)="openLoginPage()">Choose Plan</ion-button>
-              </ion-col>
-            </ion-row><br>
-          </ion-grid>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card>
-          <ion-grid class="listPlan ion-padding-top">
-            <ion-row>
-              <ion-col>
-                <div class="membershipImg" >
-                  <img src="../../../assets/images/general/diamond.png"/>
-                </div>
-              </ion-col>
-            </ion-row>
-            <br>
-            <ion-row class="basicRow">
-              <ion-col>
-                <h1>ADVANCE</h1>
-              </ion-col>
-            </ion-row>
-            <ion-row class="basicAmt">
-              <ion-col>
-                <h1>&#8377; 700</h1>
-              </ion-col>
-            </ion-row>
-            <ion-row class="planSupport">
-              <ion-col>
-                  <h6>GET PLAN FOR TWO YEAR</h6>
-              </ion-col>
-            </ion-row>
-            <ion-row class="planSupport">
-              <ion-col>
-                  <h6>READ ALL E-BOOK</h6>
-              </ion-col>
-            </ion-row>
-            <ion-row class="planSupport">
-              <ion-col>
-                  <h6>24/7 SUPPORT</h6>
-              </ion-col>
-            </ion-row>
-            <ion-row class="planSupport">
-              <ion-col>
-                  <ion-button class="buttonClass" (click)="openLoginPage()">Choose Plan</ion-button>
+                  <ion-button class="buttonClass" (click)="openLoginPage(plan)">Choose Plan</ion-button>
               </ion-col>
             </ion-row><br>
           </ion-grid>

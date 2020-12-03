@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
@@ -8,7 +8,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content> -->
   <!-- <ion-card>
     <img class="img" src="../../../../assets/images/general/thumb_146.jpg">
     <ion-card-content>
@@ -44,7 +44,7 @@
   <!-- <ion-fab left bottom>
     <button ion-fab class="fab"><ion-icon name="arrow-dropleft"></ion-icon></button>
   </ion-fab> -->
-  <ion-card >
+  <!-- <ion-card >
     <img class="img" src={{data.thumb_img}}>
     <ion-card-content>
       <div class='detail-title'>
@@ -56,9 +56,9 @@
         <ul class="ul-style" *ngFor="let list of data.product_details; let i = index">
           <li>{{list}}</li>
         </ul>
-        <!-- <button>Login & Add to cart</button> -->
+        
         <div class="ion-text-center">
-          <ion-button class="buttonClass">Login & Add to cart</ion-button>
+          <ion-button class="buttonClass" (click)="openCartPage()">Login & Add to cart</ion-button>
         </div>
         
         <div class="detail-price description">
@@ -83,5 +83,87 @@
     </ion-col>
     
     </ion-row>
-    </ion-grid>
+    </ion-grid> -->
+<!-- </ion-content> -->
+
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+          <p>{{data.book_title}}</p>
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+      <img class="img" src={{data.thumb_img}}>
+      <ion-card-content>
+        <div class='detail-title'>
+          {{data.book_title}}
+      </div>
+      <div class='detail-price'>
+          PRICE : {{data.offer_price}}
+      </div>
+      <div class="ion-text-justify">{{data.description}}</div>
+      <ul class="ul-style" *ngFor="let list of data.product_details; let i = index">
+          <li>{{list}}</li>
+      </ul>
+      <!-- <button>Login & Add to cart</button> -->
+      <div class="ion-text-center">
+          <ion-button class="buttonClass" (click)="openCartPage()">Login & Add to cart</ion-button>
+      </div>
+          <!-- <div class='detail-title'>
+              {{data.book_title}}
+          </div>
+          <div class='detail-price'>
+              PRICE : {{data.offer_price}}
+          </div>
+          <div class="ion-text-justify">{{data.description}}</div>
+          <ul class="ul-style" *ngFor="let list of data.product_details; let i = index">
+              <li>{{list}}</li>
+          </ul>
+          <div class="ion-text-center">
+              <ion-button class="buttonClass" (click)="openCartPage()">Login & Add to cart</ion-button>
+          </div> -->
+
+          <!-- <div class="detail-price description">
+              Description
+          </div> -->
+          <!-- <div class="ion-text-justify">{{data.description}}</div> -->
+      </ion-card-content>
+
+  </ion-card>
+  <p class="slider-title">Related products</p>
+  <ion-grid *ngIf='data'>
+    <ion-row>
+        <ion-col *ngFor="let list of data.relatedProducts; let i = index" size="6">
+            <div class="related-item" (click)="getrelatedItem(list)">
+                <img class="img" src={{list.thumb_img}}>
+                <p class="pt-1 p-tag">{{list.book_title}}</p>
+                <p class="pt-1">Price : {{list.offer_price}}</p>
+                <ion-button class="ion-button buttonClass">Buy</ion-button>
+            </div>
+        </ion-col>
+
+    </ion-row>
+</ion-grid>
+  <!-- <ion-grid *ngIf='data'>
+      <ion-row>
+          <ion-col *ngFor="let list of data.relatedProducts; let i = index" size="6">
+              <ion-item (click)="getrelatedItem(list)">
+                  <div class="related-item">
+                      <img class="img" src={{list.thumb_img}}>
+                      <p class="pt-1">{{list.book_title}}</p>
+                      <p class="pt-1">Price : {{list.offer_price}}</p>
+                      <ion-button class="ion-button buttonClass">Buy</ion-button>
+                  </div>
+              </ion-item>
+          </ion-col>
+
+      </ion-row>
+  </ion-grid> -->
 </ion-content>

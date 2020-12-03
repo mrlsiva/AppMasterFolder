@@ -1,0 +1,27 @@
+.cartIcon {
+    font-size: 4rem;
+    color: #e43750;
+}
+
+.browseBooks {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #e43750;
+}
+.headerRow {
+    background: gray;
+    color: white;
+    ion-col {
+        border: 1px solid white;
+    }
+}
+.thumbImg{
+    img {
+        width: 50%;
+    }
+    p {
+        line-height: 1;
+        margin: 0%;
+    }
+    
+}

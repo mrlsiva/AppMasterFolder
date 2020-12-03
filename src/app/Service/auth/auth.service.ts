@@ -9,7 +9,12 @@ export class AuthService {
   public pageName: any;
   public home_Url = "https://littleprodigybooks.com/api/home";
   public product_Url = "https://littleprodigybooks.com/api/product/";
-  public readBook_Url = "https://littleprodigybooks.com/api/read-book/"
+  public readBook_Url = "https://littleprodigybooks.com/api/read-book/";
+  public login_Url = "https://littleprodigybooks.com/api/login";
+  public regiseter_Url = "https://littleprodigybooks.com/api/auth/signup";
+  public resetPasswordEmail_Url = "https://littleprodigybooks.com/api/auth/resetpass/email";
+  public resetPasswordEmailOtp_Url = "https://littleprodigybooks.com/api/auth/resetpass/otp";
+  public resetPassword_Url ="https://littleprodigybooks.com/api/auth/resetpassword";
   public homePageDatas: any;
   public productData: any;
   public readBookData: any;
@@ -17,7 +22,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   async getEbookData(){
-        return new Promise((resolve, rejects) => {
+    return new Promise((resolve, rejects) => {
       this.http.get(this.home_Url).toPromise().then((res: any) => {
         this.homePageDatas = res.data;
         resolve(this.homePageDatas);
@@ -48,6 +53,16 @@ export class AuthService {
         resolve(this.readBookData);
       }).catch((error) => {
         console.log(error);
+      })
+    })
+  }
+
+  async login(userInfo: any) {
+    return new Promise((resolve, rejects) => {
+      this.http.post(this.resetPassword_Url,userInfo).toPromise().then((res: any) => {
+        console.log('fromAuth',res);
+      }).catch((error) => {
+        console.log(error)
       })
     })
   }
