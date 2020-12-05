@@ -39,17 +39,20 @@ export class MembershipComponent implements OnInit {
     
     let loginIfo = this.global.getLoginInfo();
     console.log(loginIfo);
-    if(loginIfo) {
-      if(loginIfo.data.subscribed_user == 1) {
-        this.router.navigate(['/readselectedbook']);
-      } else {
+    if(loginIfo != '') {
+      // if(loginIfo.data.subscribed_user == 1) {
+      //   this.router.navigate(['/readselectedbook']);
+      // } else {
         this.payment.payThroughRazorPar(plan).then((data: any) => {
-          alert('payment_id: ' + plan);
-          this.router.navigate(['/login']);
+          //alert('payment_id: ' + JSON.stringify(data));
+          if(data) {
+            this.global.presentToast('Payment successfull')
+          }
+          //this.router.navigate(['/login']);
         }).catch((error) => {
           alert(error);
         });
-      }
+      // }
     } else {
       this.router.navigate(['/login']);
     }

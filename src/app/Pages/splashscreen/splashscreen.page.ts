@@ -24,6 +24,7 @@ export class SplashscreenPage implements OnInit {
 
   openRootPage() {
     //this.navCtrl.setDirection('root');
+    localStorage.setItem('isFirstTime', 'true');
     this.router.navigateByUrl('tab/home',{ replaceUrl: true });
   }
 

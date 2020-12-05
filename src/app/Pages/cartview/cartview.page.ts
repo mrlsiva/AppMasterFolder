@@ -55,7 +55,10 @@ export class CartviewPage implements OnInit {
     };
 
     var successCallback = function (payment_id: any) {
-      alert('payment_id: ' + payment_id);
+      //alert('payment_id: ' + payment_id);
+      if(payment_id) {
+        this.global.presentToast('Payment successfull')
+      }
     };
 
     var cancelCallback = function (error: any) {

@@ -19,7 +19,7 @@ export class PaymentService {
         description: paymentInfo.description,
         image: 'https://i.imgur.com/3g7nmJC.png',
         currency: "INR", // your 3 letter currency code
-        key: "rzp_test_lSfl0bnbcpFEwO", // your Key Id from Razorpay dashboard
+        key: "rzp_test_7omiwRwctTjAbk", // your Key Id from Razorpay dashboard
         amount: 100 * paymentInfo.amount, // Payment amount in smallest denomiation e.g. cents for USD
         name: paymentInfo.planName,
         prefill: {
@@ -39,6 +39,7 @@ export class PaymentService {
   
       var successCallback = function (payment_id: any) {
         //alert('payment_id: ' + payment_id);
+        
         resolve(payment_id);
       };
   

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-
 import {HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
+
+import { GlobalService } from '../global/global.service';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,8 +15,10 @@ export class AccountService {
   public resetPassword_Url ="https://littleprodigybooks.com/api/auth/resetpassword";
   public updateUserProdile_Url = "https://littleprodigybooks.com/api/updateprofile";
   public updatePassword_Url = "https://littleprodigybooks.com/api/updatepassword";
+  public getUserProfile_Url = "https://littleprodigybooks.com/api/user";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              public global: GlobalService) { }
 
   async login(userInfo: any) {
     return new Promise((resolve, rejects) => {
@@ -37,11 +41,11 @@ export class AccountService {
   async logout() {
     return new Promise((resolve, rejects) => {
       const httpOptions = {
-        headers: new HttpHeaders({
+        headers: new HttpHeaders({  
             'Authorization':  localStorage.getItem("access_Token")
         })
       };
-      console.log(httpOptions);
+      console.log(httpOptions.headers);
       this.http.post(this.logout_Url,httpOptions).toPromise().then((res: any) => {
         console.log('fromAuth',res);
         alert(res.success);
@@ -117,6 +121,24 @@ export class AccountService {
         resolve(res);
       }).catch((error) => {
         console.log(error)
+      })
+    })
+  }
+
+  async getUserProfileInfo() {
+    return new Promise((resolve, rejects) => {
+      const httpOptions = {
+        headers: new HttpHeaders({
+            'Authorization':  localStorage.getItem("access_Token")
+        })
+      };
+      console.log("httpOptions "+JSON.stringify(httpOptions));
+      this.http.get(this.getUserProfile_Url,httpOptions).toPromise().then((data: any) => {
+        console.log(data)
+        this.global.userName = data.data.name;
+        resolve(data);
+      }).catch((error) => {
+        rejects(error)
       })
     })
   }

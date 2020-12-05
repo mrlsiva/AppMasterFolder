@@ -23,7 +23,6 @@ export class ViewmorebooksPage implements OnInit {
               private router: Router,
               public auth: AuthService,
               public http: HttpClient) {
-    // alert(this.global.pageName);
     if(this.global.pageName == 'homePage'){
       this.displayInd = true;
     } else {
@@ -44,10 +43,10 @@ export class ViewmorebooksPage implements OnInit {
   openReadBookPage(book: any) {
     console.log(book.categories_id, book.sku);
 
-    let userInfo: any = localStorage.getItem('login_Info');
+    let userInfo =  this.global.getLoginInfo();
     console.log(userInfo);
-    if(JSON.parse(userInfo)) {
-      if(JSON.parse(userInfo).data.subscribed_user == 1) {
+    if(userInfo != '') {
+      if(userInfo.subscribed_user == 1) {
         this.auth.getReadBookData(book.categories_id, book.sku).then((data: any) => {
           this.global.setBookName(book.book_title);
           this.router.navigate(['/readselectedbook']);
@@ -56,7 +55,7 @@ export class ViewmorebooksPage implements OnInit {
         }).catch((error) => {
           console.log(error);
         })
-      } else if(JSON.parse(userInfo).data.offline_user == 1) {
+      } else if(userInfo.offline_user == 1) {
 
       } else{
         this.router.navigate(['/membershipaccount'])

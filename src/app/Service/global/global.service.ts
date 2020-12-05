@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
+import { ToastController, LoadingController  } from '@ionic/angular';
+import { type } from 'os';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,9 +22,12 @@ export class GlobalService {
   public isFirstTime: boolean = true;
   public loginDetails: any;
   public enableLogOut = false;
-  public userName: any;
+  public userName ="Guest User";
+  public isLoading = true;
   
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              public toastController: ToastController,
+              public loadingController: LoadingController) {
     if(this.getLoginInfo()) {
       this.enableLogOut = true;
     } else {
@@ -58,8 +64,46 @@ export class GlobalService {
   }
 
   getLoginInfo() {
-    this.loginDetails = JSON.parse(localStorage.getItem('login_Info'));
+    let loginDetail= localStorage.getItem('login_Info');
+    console.log((loginDetail == ''));
+    if(loginDetail != '') {
+      return JSON.parse(loginDetail);
+    } else {
+      return loginDetail;
+    }
     //console.log(this.loginDetails);
-    return this.loginDetails;
+   // return this.loginDetails;
+  }
+
+  clearLocalStorageLoginInfo() {
+    localStorage.setItem('login_Info', '');
+    localStorage.setItem('access_Token', '');
+  }
+
+  async presentToast(msg: any) {
+    const toast = await this.toastController.create({
+      message: msg,
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  async loadingPresent() {
+    this.isLoading = true;
+    return await this.loadingController.create({
+      message: 'Please wait ...',
+      spinner: 'circles' 
+    }).then(a => {
+      a.present().then(() => {
+        console.log('loading presented');
+        if (!this.isLoading) {
+            a.dismiss().then(() => console.log('abort laoding'));
+        }
+      });
+    });
+  }
+  async loadingDismiss() {
+    this.isLoading = false;
+    return await this.loadingController.dismiss().then(() => console.log('loading dismissed'));
   }
 }

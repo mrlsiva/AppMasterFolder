@@ -22,7 +22,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   async getEbookData(){
-        return new Promise((resolve, rejects) => {
+    return new Promise((resolve, rejects) => {
       this.http.get(this.home_Url).toPromise().then((res: any) => {
         this.homePageDatas = res.data;
         resolve(this.homePageDatas);

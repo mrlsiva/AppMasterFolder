@@ -10,28 +10,17 @@
 </ion-header>
 
 <ion-content class="ion-text-center">
-  <!-- <h5>Update Profile</h5> -->
-  <!-- <app-readebook></app-readebook> -->
+  <div *ngIf="displayInd">
   <ion-segment color="danger" [(ngModel)]="type" (ionChange)="segmentChanged($event)" scrollable>
     <ion-segment-button value="membershipAcc">
       <ion-label>Membership Account</ion-label>
-      <!-- <ion-icon name="cash"></ion-icon> -->
     </ion-segment-button>
     <ion-segment-button value="profile">
       <ion-label>Profile</ion-label>
-      <!-- <ion-icon name="log-out"></ion-icon> -->
     </ion-segment-button>
   </ion-segment>
 
   <div [ngSwitch]="type">
-    <!-- <ion-list *ngSwitchCase="'deposit'">
-      <ion-item *ngFor="let item of [].constructor(20); let i = index">
-        <ion-thumbnail slot="start">
-          <img src="https://avatars.io/instagram/unknown">
-        </ion-thumbnail>
-        <h6>Deposit - {{ i }}</h6>
-      </ion-item>
-    </ion-list> -->
     <div *ngSwitchCase="'membershipAcc'">
       <ion-grid>
         <ion-row>
@@ -67,16 +56,15 @@
             <ion-row>
               <ion-col>
                <ion-item>
-                  <ion-label position="floating">Email</ion-label>
+                  <ion-label position="floating">Full Name</ion-label>
                   <ion-input [(ngModel)]="profileInfo.name"></ion-input>
                   <ion-icon name="person" slot="start"></ion-icon>
                 </ion-item>
                 <br>
                 <ion-item>
-                  <ion-label position="floating">Password</ion-label>
+                  <ion-label position="floating">Email</ion-label>
                   <ion-input [(ngModel)]="profileInfo.email"></ion-input>
                   <ion-icon name="mail" slot="start"></ion-icon>
-                  <!-- <ion-icon name="lock-closed" slot="start"></ion-icon> -->
                 </ion-item>
                 
                 <div class="ion-margin-top ion-text-center">
@@ -124,4 +112,22 @@
       </ion-slides>
     </ion-list>
   </div>
+</div>
+<div *ngIf="!displayInd">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <p>My Memberships</p>
+          </ion-card-header>
+          <ion-card-content>
+          <p>You are not a member yet</p>
+          <a (click)="openMembershipPage()">Choose Plan</a>
+        </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
 </ion-content>

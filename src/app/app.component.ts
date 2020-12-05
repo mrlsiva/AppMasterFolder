@@ -97,11 +97,10 @@ export class AppComponent implements OnInit {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       //this.navCtrl.setDirection('root');
-      localStorage.setItem('isFirstTime', 'true');
-      if(localStorage.getItem('isFirstTime')) {
-        this.router.navigate(['/splashscreen']);
-      } else {
+      if(localStorage.getItem('isFirstTime') != null || localStorage.getItem('isFirstTime') == 'true') {
         this.router.navigate(['/tab/home']);
+      } else {
+        this.router.navigate(['/splashscreen']);
         
       }
       
@@ -127,11 +126,12 @@ export class AppComponent implements OnInit {
     // if (path !== undefined) {
     //   this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     // }
+    console.log(this.global.userName);
     let userInfo = this.global.getLoginInfo();
-    if(userInfo) {
-      this.global.userName = userInfo.data.name
+    if(userInfo != '') {
+      this.global.userName = userInfo.name;
     } else {
-      this.global.userName = "User Name";
+      this.global.userName = "Guest User";
     }
   }
   sideMenuPage(url: any) {
@@ -185,17 +185,22 @@ export class AppComponent implements OnInit {
   }
 
   logout() {
-    localStorage.clear();
+    //localStorage.clear();
+    this.global.clearLocalStorageLoginInfo();
     this.global.enableLogOut = false;
-    this.global.userName = "User Name";
+    this.global.userName = "Guest User";
     this.router.navigateByUrl('tab/home',{ replaceUrl: true });
     // this.account.logout().then((data: any) => {
-    //   if(data.status == 200) {
-    //     this.global.enableLogOut = false;
+    //   if(data.success == true) {
     //     localStorage.clear();
+    //     this.global.enableLogOut = false;
+    //     this.global.userName = "Guest User";
+    //     this.router.navigateByUrl('tab/home',{ replaceUrl: true });
     //   } else {
     //     this.global.enableLogOut = true;
     //   }
+    // }).catch((error) => {
+    //   alert(JSON.stringify(error));
     // })
   }
 }

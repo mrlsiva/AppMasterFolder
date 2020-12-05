@@ -4,9 +4,8 @@ import { HttpClient, HttpHeaderResponse, HttpHeaders } from '@angular/common/htt
 import * as moment from 'moment';
 
 import { Router, NavigationExtras } from '@angular/router';
-//import { GlobalService } from '../../Service/global.service';
 import { GlobalService } from '../../Service/global/global.service';
-
+import { AuthService } from '../../Service/auth/auth.service';
 
 @Component({
   selector: 'app-ebookreader',
@@ -28,7 +27,10 @@ export class EbookreaderPage implements OnInit {
   public testData: any;
   public eBookList: any;
 
-  constructor(private router: Router,public http: HttpClient, public global: GlobalService) {
+  constructor(private router: Router,
+              public http: HttpClient, 
+              public global: GlobalService,
+              public auth: AuthService) {
 
   }
 
@@ -69,10 +71,20 @@ export class EbookreaderPage implements OnInit {
 
   async getEbookData() {
     try {
-      (await this.global.getEbookData()).subscribe((data: any) => {
-        console.log(data.data);
-        this.eBookList = data.data;
-      });
+      if(this.auth.homePageDatas != undefined) {
+        this.eBookList = this.auth.homePageDatas;
+      } else {
+        this.auth.getEbookData().then((data: any) => {
+          console.log(data);
+          this.eBookList = data;
+        }).catch((error) => {
+          console.log(error);
+        })
+      }
+      // (await this.global.getEbookData()).subscribe((data: any) => {
+      //   console.log(data.data);
+      //   this.eBookList = data.data;
+      // });
     } catch(error) {
       console.log(error);
     }

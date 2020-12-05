@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, NavigationExtras } from '@angular/router';
 
-import { GlobalService } from '../../Service/global.service';
+import { GlobalService } from '../../Service/global/global.service';
 import { AuthService } from '../../Service/auth/auth.service';
 @Component({
   selector: 'app-home',
@@ -58,23 +58,20 @@ export class HomePage implements OnInit {
     
   }
   async getCategoriesData(){
-    // this.global.getHomeCategories().toPromise().then(response =>
-    //  { 
-    //    if(response['success']===true)
-    //    this.categoriesData=response['data'];
-    // });
-    console.log(this.auth.homePageDatas);
     if(this.auth.homePageDatas != undefined) {
       this.categoriesData = this.auth.homePageDatas;
     } else {
       console.log(this.auth.homePageDatas);
+      this.global.loadingPresent(); 
       this.auth.getEbookData().then((data: any) => {
         console.log(data);
         this.categoriesData = data;
         setTimeout(() => {
           this.displayInd = true;
-        }, 3000);
-        
+        }, 2000);
+        this.global.loadingDismiss();
+      }).catch((error) => {
+        this.global.loadingDismiss();
       })
     }
   }

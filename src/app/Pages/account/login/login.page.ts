@@ -54,21 +54,52 @@ export class LoginPage implements OnInit {
 
   doLogin() {
     console.log(this.userInfo);
-       
+    this.global.loadingPresent();   
     this.accountService.login(this.userInfo).then((data: any) => {
       if(data.success) {
+        // this.global.loginDetails = {
+        //   "name" : data.data.name,
+        //   "email": data.data.email,
+        //   "expires_at": data.data.expires_at,
+        //   "offline_user": data.data.offline_user,
+        //   "subscribed_user": data.data.subscribed_user,
+        //   "user_id": data.data.user_id,
+        // }
         localStorage.setItem('access_Token', data.data.token_type+" "+data.data.access_token);
-        localStorage.setItem('login_Info', JSON.stringify(data));
+        this.accountService.getUserProfileInfo().then((data: any) => {
+          this.global.loginDetails = {
+          "name" : data.data.name,
+          "email": data.data.email,
+          "email_verified_at" : data.data.email_verified_at,
+          "offline_user": data.data.offline_user,
+          "subscribed_user": data.data.subscribed_user,
+          "user_id": data.data.id,
+          "registration_mode" : data.data.registration_mode,
+          "role_id" : data.data.role_id,
+          "session_id" : data.data.session_id,
+          "success" : "true"
+        }
         this.global.enableLogOut = true;
         this.global.userName = data.data.name;
+        localStorage.setItem("login_Info", JSON.stringify(this.global.loginDetails));
+        this.global.presentToast('You are successfully logged in');
         this.navCtrl.pop();
+        this.global.loadingDismiss();
+        }).catch((error) => {
+          alert(error);
+          this.global.presentToast(error);
+          this.global.loadingDismiss();
+        })  
       } else {
         alert(data.message);
+        this.global.presentToast(data.message);
         this.global.enableLogOut = false;
+        this.global.loadingDismiss();
       }
       
     }).catch((error) => {
       alert(JSON.stringify(error));
+      this.global.loadingDismiss();
     });
   }
 
