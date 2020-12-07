@@ -1,8 +1,8 @@
 {
   "name": "littleprodigybooks",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "littleprodigybooks",
+  "homepage": "https://littleprodigybooks.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -28,6 +28,7 @@
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
     "com.razorpay.cordova": "^1.4.12",
+    "cordova-plugin-cocoapod-support": "^1.6.2",
     "moment": "^2.29.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
@@ -57,5 +58,5 @@
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
   },
-  "description": "An Ionic project"
+  "description": "littleprodigybooks project"
 }
